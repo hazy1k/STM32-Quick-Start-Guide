@@ -1,0 +1,10 @@
+14:37:22 **** Incremental Build of configuration Debug for project 10.GTIM-Input capture ****
+make -j20 all 
+arm-none-eabi-size  10.GTIM-Input\ capture.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36660	    108	   2316	  39084	   98ac	10.GTIM-Input capture.elf
+Finished building: default.size.stdout
+ 
+
+14:37:23 Build Finished. 0 errors, 0 warnings. (took 449ms)
+

@@ -1,0 +1,2 @@
+../Core/Src/wwdg.c:41:6:MX_WWDG1_Init	2
+../Core/Src/wwdg.c:66:6:HAL_WWDG_MspInit	2

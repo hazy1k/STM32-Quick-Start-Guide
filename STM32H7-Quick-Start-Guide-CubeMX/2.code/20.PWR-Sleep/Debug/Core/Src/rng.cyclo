@@ -1,0 +1,5 @@
+../Core/Src/rng.c:30:6:MX_RNG_Init	2
+../Core/Src/rng.c:52:6:HAL_RNG_MspInit	3
+../Core/Src/rng.c:79:6:HAL_RNG_MspDeInit	2
+../Core/Src/rng.c:98:10:get_random_number	1
+../Core/Src/rng.c:106:10:get_random_number_in_range	1

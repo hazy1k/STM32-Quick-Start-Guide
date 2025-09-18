@@ -1,0 +1,9 @@
+../BSP/I2C/i2c.c:9:6:iic_init	40	static
+../BSP/I2C/i2c.c:35:13:iic_delay	8	static
+../BSP/I2C/i2c.c:45:6:iic_start	8	static
+../BSP/I2C/i2c.c:61:6:iic_stop	8	static
+../BSP/I2C/i2c.c:77:9:iic_wait_ack	16	static
+../BSP/I2C/i2c.c:109:6:iic_ack	8	static
+../BSP/I2C/i2c.c:126:6:iic_nack	8	static
+../BSP/I2C/i2c.c:141:6:iic_send_byte	24	static
+../BSP/I2C/i2c.c:162:9:iic_read_byte	24	static

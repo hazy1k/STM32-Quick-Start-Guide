@@ -1,0 +1,10 @@
+11:04:01 **** Incremental Build of configuration Debug for project 22.ADC ****
+make -j20 all 
+arm-none-eabi-size  22.ADC.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48724	    472	   2176	  51372	   c8ac	22.ADC.elf
+Finished building: default.size.stdout
+ 
+
+11:04:02 Build Finished. 0 errors, 0 warnings. (took 390ms)
+

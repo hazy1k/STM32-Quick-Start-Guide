@@ -1,0 +1,8 @@
+../BSP/FLASH/stmflash.c:10:16:stmflash_get_error_status	10
+../BSP/FLASH/stmflash.c:36:16:stmflash_wait_done	4
+../BSP/FLASH/stmflash.c:73:16:stmflash_erase_sector0	2
+../BSP/FLASH/stmflash.c:102:16:stmflash_write_8word	3
+../BSP/FLASH/stmflash.c:137:10:stmflash_read_word	1
+../BSP/FLASH/stmflash.c:159:6:stmflash_write	14
+../BSP/FLASH/stmflash.c:239:6:stmflash_read	2
+../BSP/FLASH/stmflash.c:259:6:test_write	1

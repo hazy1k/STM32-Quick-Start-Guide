@@ -1,0 +1,8 @@
+../Core/Src/main.c:15:6:show_sdcard_info	5
+../Core/Src/main.c:59:6:sd_test_read	3
+../Core/Src/main.c:92:6:sd_test_write	3
+../Core/Src/main.c:115:5:main	4
+../Core/Src/main.c:151:6:SystemClock_Config	4
+../Core/Src/main.c:213:6:PeriphCommonClock_Config	2
+../Core/Src/main.c:233:6:MPU_Config	1
+../Core/Src/main.c:264:6:Error_Handler	1

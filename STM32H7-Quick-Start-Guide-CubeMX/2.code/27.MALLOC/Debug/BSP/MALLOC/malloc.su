@@ -1,0 +1,9 @@
+../BSP/MALLOC/malloc.c:76:6:my_mem_copy	32	static
+../BSP/MALLOC/malloc.c:91:6:my_mem_set	32	static
+../BSP/MALLOC/malloc.c:103:6:my_mem_init	24	static
+../BSP/MALLOC/malloc.c:115:10:my_mem_perused	24	static
+../BSP/MALLOC/malloc.c:136:17:my_mem_malloc	32	static
+../BSP/MALLOC/malloc.c:188:16:my_mem_free	32	static
+../BSP/MALLOC/malloc.c:222:6:myfree	24	static
+../BSP/MALLOC/malloc.c:238:7:mymalloc	24	static
+../BSP/MALLOC/malloc.c:260:7:myrealloc	32	static

@@ -1,0 +1,4 @@
+../Core/Src/main.c:18:5:main	16	static
+../Core/Src/main.c:50:6:SystemClock_Config	120	static
+../Core/Src/main.c:112:6:PeriphCommonClock_Config	200	static
+../Core/Src/main.c:135:6:Error_Handler	4	static,ignoring_inline_asm

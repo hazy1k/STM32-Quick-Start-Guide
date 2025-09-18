@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“8.GTIM-INT/7.BTIM.ioc”重命名为“8.GTIM-INT.ioc”" description="重命名资源“7.BTIM.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="7.BTIM.ioc" name="8.GTIM-INT.ioc" stamp="1756193268270" updateReferences="true"/>
+</session>

@@ -1,0 +1,10 @@
+15:48:39 **** Incremental Build of configuration Debug for project 11.GTIM-Pluse ****
+make -j20 all 
+arm-none-eabi-size  11.GTIM-Pluse.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35740	    112	   2384	  38236	   955c	11.GTIM-Pluse.elf
+Finished building: default.size.stdout
+ 
+
+15:48:39 Build Finished. 0 errors, 0 warnings. (took 344ms)
+

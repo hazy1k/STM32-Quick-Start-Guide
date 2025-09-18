@@ -1,0 +1,10 @@
+14:06:06 **** Incremental Build of configuration Debug for project 21.DMA ****
+make -j20 all 
+arm-none-eabi-size  21.DMA.elf 
+   text	   data	    bss	    dec	    hex	filename
+  35004	     16	   6640	  41660	   a2bc	21.DMA.elf
+Finished building: default.size.stdout
+ 
+
+14:06:06 Build Finished. 0 errors, 0 warnings. (took 339ms)
+

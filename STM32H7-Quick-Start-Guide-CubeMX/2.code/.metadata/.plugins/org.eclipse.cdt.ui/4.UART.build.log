@@ -1,0 +1,10 @@
+20:05:51 **** Incremental Build of configuration Debug for project 4.UART ****
+make -j20 all 
+arm-none-eabi-size  4.UART.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29980	     16	   1792	  31788	   7c2c	4.UART.elf
+Finished building: default.size.stdout
+ 
+
+20:05:52 Build Finished. 0 errors, 0 warnings. (took 328ms)
+

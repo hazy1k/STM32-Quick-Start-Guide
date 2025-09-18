@@ -1,0 +1,16 @@
+../Core/Src/rtc.c:11:6:rtc_write_bkr	1
+../Core/Src/rtc.c:18:10:rtc_read_bkr	1
+../Core/Src/rtc.c:26:6:rtc_set_time	2
+../Core/Src/rtc.c:42:6:rtc_set_date	2
+../Core/Src/rtc.c:57:9:MX_RTC_Init	4
+../Core/Src/rtc.c:90:6:HAL_RTC_MspInit	4
+../Core/Src/rtc.c:135:6:HAL_RTC_MspDeInit	2
+../Core/Src/rtc.c:156:6:rtc_get_time	1
+../Core/Src/rtc.c:167:6:rtc_get_date	1
+../Core/Src/rtc.c:182:9:rtc_get_week	5
+../Core/Src/rtc.c:206:6:rtc_set_alarma	1
+../Core/Src/rtc.c:240:6:rtc_set_wakeup	1
+../Core/Src/rtc.c:253:6:RTC_Alarm_IRQHandler	1
+../Core/Src/rtc.c:258:6:HAL_RTC_AlarmAEventCallback	1
+../Core/Src/rtc.c:266:6:RTC_WKUP_IRQHandler	1
+../Core/Src/rtc.c:272:6:HAL_RTCEx_WakeUpTimerEventCallback	1

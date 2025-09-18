@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“7.BTIM/6.WWDG.ioc”重命名为“7.BTIM.ioc”" description="重命名资源“6.WWDG.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="6.WWDG.ioc" name="7.BTIM.ioc" stamp="1756101277922" updateReferences="true"/>
+</session>

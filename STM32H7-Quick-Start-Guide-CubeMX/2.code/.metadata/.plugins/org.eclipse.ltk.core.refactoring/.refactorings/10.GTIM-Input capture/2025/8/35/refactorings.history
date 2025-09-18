@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“10.GTIM-Input capture/9.GTIM-PWM.ioc”重命名为“10.GTIM-Input capture.ioc”" description="重命名资源“9.GTIM-PWM.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="9.GTIM-PWM.ioc" name="10.GTIM-Input capture.ioc" stamp="1756351411265" updateReferences="true"/>
+</session>

@@ -1,0 +1,4 @@
+../Core/Src/main.c:18:5:main	1
+../Core/Src/main.c:50:6:SystemClock_Config	4
+../Core/Src/main.c:112:6:PeriphCommonClock_Config	2
+../Core/Src/main.c:135:6:Error_Handler	1

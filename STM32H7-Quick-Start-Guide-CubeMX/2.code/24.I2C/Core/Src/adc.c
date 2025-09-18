@@ -1,0 +1,147 @@
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file    adc.c
+  * @brief   This file provides code for the configuration
+  *          of the ADC instances.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2025 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+/* Includes ------------------------------------------------------------------*/
+#include "adc.h"
+
+/* USER CODE BEGIN 0 */
+
+/* USER CODE END 0 */
+
+ADC_HandleTypeDef hadc1;
+
+/**
+ * @brief       ADC初始化函数
+ *   @note      本函数支持ADC1/ADC2任意通道,但是不支持ADC3
+ *              我们使用16位精度, ADC采样时钟=32M, 转换时间为:采样周期 + 8.5个ADC周期
+ *              设置最大采样周期: 810.5, 则转换时间 = 819个ADC周期 = 25.6us
+ * @param       无
+ * @retval      无
+ */
+void MX_ADC1_Init(void)
+{
+  hadc1.Instance = ADC1;                                          // 选择ADC1
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV2;               // 输入时钟2分频
+  hadc1.Init.Resolution = ADC_RESOLUTION_16B;                     // 16位模式
+  hadc1.Init.ScanConvMode = ADC_SCAN_DISABLE;                     // 非扫描模式
+  hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;                  // 关闭EOC中断
+  hadc1.Init.LowPowerAutoWait = DISABLE;                          // 自动低功耗关闭
+  hadc1.Init.ContinuousConvMode = DISABLE;                        // 关闭连续转换模式
+  hadc1.Init.NbrOfConversion = 1;                                 // 通道数
+  hadc1.Init.DiscontinuousConvMode = DISABLE;                     // 禁止常规转换组不连续采样模式
+  hadc1.Init.NbrOfDiscConversion = 0;                			  // 不连续采样模式的通道数
+  hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;               // 软件触发
+  hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;// 外部触发
+  hadc1.Init.ConversionDataManagement = ADC_CONVERSIONDATA_DR;    // 常规通道的数据仅仅保存在DR寄存器里面
+  hadc1.Init.Overrun = ADC_OVR_DATA_PRESERVED;                    // 有新的数据后直接覆盖掉旧数据
+  hadc1.Init.LeftBitShift = ADC_LEFTBITSHIFT_NONE;                // 设置ADC转换结果的左移位数
+  hadc1.Init.OversamplingMode = DISABLE;                          // 关闭过采样
+  hadc1.Init.Oversampling.Ratio = 1;
+  if (HAL_ADC_Init(&hadc1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  HAL_ADCEx_Calibration_Start(&hadc1, ADC_CALIB_OFFSET, ADC_SINGLE_ENDED); // ADC校准
+}
+/**
+ * @brief       获得ADC转换后的结果
+ * @param       ch: 通道值 0~19，取值范围为：ADC_CHANNEL_0~ADC_CHANNEL_19
+ * @retval      返回值:转换结果
+ */
+uint32_t MX_ADC1_result(uint32_t ch)
+{
+  ADC_ChannelConfTypeDef sConfig = {0};
+  /** Configure Regular Channel
+  */
+  sConfig.Channel = ch; // 通道
+  sConfig.Rank = ADC_REGULAR_RANK_1; // 序列
+  sConfig.SamplingTime = ADC_SAMPLETIME_810CYCLES_5; // 采样时间
+  sConfig.SingleDiff = ADC_SINGLE_ENDED; // 单边采集
+  sConfig.OffsetNumber = ADC_OFFSET_NONE; // 不使用偏移量的通道
+  sConfig.Offset = 0; // 偏移量为0
+  sConfig.OffsetSignedSaturation = DISABLE;
+  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  HAL_ADC_Start(&hadc1);
+  HAL_ADC_PollForConversion(&hadc1, 10); // 轮询准换
+  return HAL_ADC_GetValue(&hadc1);
+}
+
+void HAL_ADC_MspInit(ADC_HandleTypeDef* adcHandle)
+{
+  if(adcHandle->Instance == ADC1)
+  {
+	GPIO_InitTypeDef GPIO_InitStruct;
+    __HAL_RCC_ADC12_CLK_ENABLE();
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    __HAL_RCC_ADC_CONFIG(RCC_ADCCLKSOURCE_CLKP);
+    /**ADC1 GPIO Configuration
+    PA5     ------> ADC1_INP19
+    */
+    GPIO_InitStruct.Pin = GPIO_PIN_5;
+    GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  }
+}
+
+void HAL_ADC_MspDeInit(ADC_HandleTypeDef* adcHandle)
+{
+
+  if(adcHandle->Instance==ADC1)
+  {
+  /* USER CODE BEGIN ADC1_MspDeInit 0 */
+
+  /* USER CODE END ADC1_MspDeInit 0 */
+    /* Peripheral clock disable */
+    __HAL_RCC_ADC12_CLK_DISABLE();
+
+    /**ADC1 GPIO Configuration
+    PA5     ------> ADC1_INP19
+    */
+    HAL_GPIO_DeInit(GPIOA, GPIO_PIN_5);
+
+  /* USER CODE BEGIN ADC1_MspDeInit 1 */
+
+  /* USER CODE END ADC1_MspDeInit 1 */
+  }
+}
+
+/* USER CODE BEGIN 1 */
+/**
+ * @brief       获取通道ch的转换值，取times次,然后平均
+ * @param       ch      : 通道号, 0~19
+ * @param       times   : 获取次数
+ * @retval      通道ch的times次转换结果平均值
+ */
+uint32_t adc_get_result_average(uint32_t ch, uint8_t times)
+{
+    uint32_t temp_val = 0;
+    uint8_t t;
+
+    for (t = 0; t < times; t++) /* 获取times次数据 */
+    {
+        temp_val += MX_ADC1_result(ch);
+        HAL_Delay(5);
+    }
+    return temp_val / times;    /* 返回平均值 */
+}
+/* USER CODE END 1 */

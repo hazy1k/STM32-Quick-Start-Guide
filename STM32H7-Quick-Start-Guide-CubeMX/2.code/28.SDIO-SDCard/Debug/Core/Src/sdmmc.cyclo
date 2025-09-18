@@ -1,0 +1,11 @@
+../Core/Src/sdmmc.c:11:6:sys_nvic_set_vector_table	1
+../Core/Src/sdmmc.c:22:6:sys_wfi_set	1
+../Core/Src/sdmmc.c:32:6:sys_intx_disable	1
+../Core/Src/sdmmc.c:42:6:sys_intx_enable	1
+../Core/Src/sdmmc.c:53:6:sys_msr_msp	1
+../Core/Src/sdmmc.c:66:9:sd_init	2
+../Core/Src/sdmmc.c:96:6:HAL_SD_MspInit	1
+../Core/Src/sdmmc.c:136:9:get_sd_card_info	1
+../Core/Src/sdmmc.c:149:9:get_sd_card_state	1
+../Core/Src/sdmmc.c:161:9:sd_read_disk	3
+../Core/Src/sdmmc.c:191:9:sd_write_disk	3

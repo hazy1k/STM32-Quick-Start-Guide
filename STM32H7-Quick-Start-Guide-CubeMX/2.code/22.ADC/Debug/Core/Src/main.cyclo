@@ -1,0 +1,4 @@
+../Core/Src/main.c:65:5:main	1
+../Core/Src/main.c:117:6:SystemClock_Config	4
+../Core/Src/main.c:178:6:MPU_Config	1
+../Core/Src/main.c:209:6:Error_Handler	1

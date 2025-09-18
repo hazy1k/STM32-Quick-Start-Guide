@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“22.ADC/12.ATIM-PWM.ioc”重命名为“22.ADC.ioc”" description="重命名资源“12.ATIM-PWM.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="12.ATIM-PWM.ioc" name="22.ADC.ioc" stamp="1757298040470" updateReferences="true"/>
+</session>

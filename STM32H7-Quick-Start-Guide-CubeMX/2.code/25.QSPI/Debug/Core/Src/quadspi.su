@@ -1,0 +1,7 @@
+../Core/Src/quadspi.c:12:9:qspi_wait_flag	32	static
+../Core/Src/quadspi.c:34:9:qspi_init	8	static
+../Core/Src/quadspi.c:64:6:HAL_QSPI_MspInit	56	static
+../Core/Src/quadspi.c:112:6:qspi_send_cmd	72	static
+../Core/Src/quadspi.c:170:9:qspi_receive	16	static
+../Core/Src/quadspi.c:189:9:qspi_transmit	16	static
+../Core/Src/quadspi.c:210:6:sys_qspi_enable_memmapmode	56	static

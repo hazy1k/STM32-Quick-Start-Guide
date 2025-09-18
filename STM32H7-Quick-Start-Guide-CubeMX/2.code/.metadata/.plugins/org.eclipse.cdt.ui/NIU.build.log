@@ -1,0 +1,10 @@
+20:15:26 **** Incremental Build of configuration Debug for project NIU ****
+make -j20 all 
+arm-none-eabi-size  NIU.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7856	     12	   1644	   9512	   2528	NIU.elf
+Finished building: default.size.stdout
+ 
+
+20:15:26 Build Finished. 0 errors, 0 warnings. (took 311ms)
+

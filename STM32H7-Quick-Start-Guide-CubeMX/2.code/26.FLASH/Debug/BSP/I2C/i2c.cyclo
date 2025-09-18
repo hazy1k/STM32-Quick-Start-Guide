@@ -1,0 +1,9 @@
+../BSP/I2C/i2c.c:9:6:iic_init	1
+../BSP/I2C/i2c.c:35:13:iic_delay	1
+../BSP/I2C/i2c.c:45:6:iic_start	1
+../BSP/I2C/i2c.c:61:6:iic_stop	1
+../BSP/I2C/i2c.c:77:9:iic_wait_ack	3
+../BSP/I2C/i2c.c:109:6:iic_ack	1
+../BSP/I2C/i2c.c:126:6:iic_nack	1
+../BSP/I2C/i2c.c:141:6:iic_send_byte	3
+../BSP/I2C/i2c.c:162:9:iic_read_byte	4

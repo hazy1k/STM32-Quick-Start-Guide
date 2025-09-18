@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="将资源“19.RNG/4.USART.ioc”重命名为“4.RNG.ioc”" description="重命名资源“4.USART.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="4.USART.ioc" name="4.RNG.ioc" stamp="1757048936401" updateReferences="true"/>&#x0A;<refactoring comment="将资源“19.RNG/4.RNG.ioc”重命名为“19.RNG.ioc”" description="重命名资源“4.RNG.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="4.RNG.ioc" name="19.RNG.ioc" stamp="1757048943683" updateReferences="true"/>
+</session>

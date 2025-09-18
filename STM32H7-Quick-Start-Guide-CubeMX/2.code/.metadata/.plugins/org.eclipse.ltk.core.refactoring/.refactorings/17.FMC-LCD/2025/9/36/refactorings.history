@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="将资源“17.FMC-LCD/4.USART.ioc”重命名为“17.FMC-LCD.ioc”" description="重命名资源“4.USART.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="4.USART.ioc" name="17.FMC-LCD.ioc" stamp="1756877261916" updateReferences="true"/>&#x0A;<refactoring comment="将资源“17.FMC-LCD/BSP/LCD/lcd_ec.h”重命名为“lcd_ex.h”" description="重命名资源“lcd_ec.h”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="BSP/LCD/lcd_ec.h" name="lcd_ex.h" stamp="1756879109991" updateReferences="true"/>
+</session>

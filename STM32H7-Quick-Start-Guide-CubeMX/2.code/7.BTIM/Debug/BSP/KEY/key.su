@@ -1,0 +1,2 @@
+../BSP/KEY/key.c:8:6:MX_KEY_GPIO_Init	32	static
+../BSP/KEY/key.c:36:9:key_scan	24	static

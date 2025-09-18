@@ -1,0 +1,4 @@
+../BSP/Delay/delay.c:87:6:delay_init	1
+../BSP/Delay/delay.c:112:6:delay_us	4
+../BSP/Delay/delay.c:156:6:delay_ms	1
+../BSP/Delay/delay.c:180:6:HAL_Delay	1

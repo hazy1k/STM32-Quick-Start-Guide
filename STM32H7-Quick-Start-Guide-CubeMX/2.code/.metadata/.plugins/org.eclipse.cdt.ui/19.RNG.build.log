@@ -1,0 +1,10 @@
+13:42:32 **** Incremental Build of configuration Debug for project 19.RNG ****
+make -j20 all 
+arm-none-eabi-size  19.RNG.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32188	    112	   2072	  34372	   8644	19.RNG.elf
+Finished building: default.size.stdout
+ 
+
+13:42:33 Build Finished. 0 errors, 0 warnings. (took 359ms)
+

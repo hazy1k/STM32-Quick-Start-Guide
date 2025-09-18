@@ -1,0 +1,8 @@
+../BSP/FLASH/stmflash.c:10:16:stmflash_get_error_status	16	static
+../BSP/FLASH/stmflash.c:36:16:stmflash_wait_done	24	static
+../BSP/FLASH/stmflash.c:73:16:stmflash_erase_sector0	16	static
+../BSP/FLASH/stmflash.c:102:16:stmflash_write_8word	24	static,ignoring_inline_asm
+../BSP/FLASH/stmflash.c:137:10:stmflash_read_word	16	static
+../BSP/FLASH/stmflash.c:159:6:stmflash_write	64	static,ignoring_inline_asm
+../BSP/FLASH/stmflash.c:239:6:stmflash_read	40	static
+../BSP/FLASH/stmflash.c:259:6:test_write	16	static

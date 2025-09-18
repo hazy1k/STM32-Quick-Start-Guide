@@ -1,0 +1,10 @@
+15:17:34 **** Incremental Build of configuration Debug for project 6.WWDG ****
+make -j20 all 
+arm-none-eabi-size  6.WWDG.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25112	    108	   2076	  27296	   6aa0	6.WWDG.elf
+Finished building: default.size.stdout
+ 
+
+15:17:34 Build Finished. 0 errors, 0 warnings. (took 345ms)
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“3.EXTI/2.GPIO.ioc”重命名为“3.EXTI.ioc”" description="重命名资源“2.GPIO.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="2.GPIO.ioc" name="3.EXTI.ioc" stamp="1755656253681" updateReferences="true"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“28.SDIO-SDCard/26.FLASH.ioc”重命名为“28.SDIO-SDCard.ioc”" description="重命名资源“26.FLASH.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="26.FLASH.ioc" name="28.SDIO-SDCard.ioc" stamp="1757739181471" updateReferences="true"/>
+</session>

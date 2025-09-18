@@ -1,0 +1,5 @@
+../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_wwdg.c:184:19:HAL_WWDG_Init	16	static
+../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_wwdg.c:238:13:HAL_WWDG_MspInit	16	static
+../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_wwdg.c:351:19:HAL_WWDG_Refresh	16	static
+../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_wwdg.c:374:6:HAL_WWDG_IRQHandler	16	static
+../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_wwdg.c:403:13:HAL_WWDG_EarlyWakeupCallback	16	static

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="将资源“21.DMA/20.PWR-Sleep.ioc”重命名为“20.DMA.ioc”" description="重命名资源“20.PWR-Sleep.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="20.PWR-Sleep.ioc" name="20.DMA.ioc" stamp="1757212780520" updateReferences="true"/>&#x0A;<refactoring comment="将资源“21.DMA/20.DMA.ioc”重命名为“21.DMA.ioc”" description="重命名资源“20.DMA.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="20.DMA.ioc" name="21.DMA.ioc" stamp="1757212794632" updateReferences="true"/>
+</session>

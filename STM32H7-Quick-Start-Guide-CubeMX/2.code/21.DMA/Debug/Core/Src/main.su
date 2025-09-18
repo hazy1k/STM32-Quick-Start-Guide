@@ -1,0 +1,6 @@
+../Core/Src/main.c:18:6:HAL_UART_TxCpltCallback	16	static
+../Core/Src/main.c:28:6:UART_SendString	16	static
+../Core/Src/main.c:33:5:main	16	static
+../Core/Src/main.c:105:6:SystemClock_Config	120	static
+../Core/Src/main.c:166:6:MPU_Config	24	static
+../Core/Src/main.c:197:6:Error_Handler	4	static,ignoring_inline_asm

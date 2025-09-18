@@ -1,0 +1,10 @@
+17:03:30 **** Incremental Build of configuration Debug for project 15.ATIM-PWMIN ****
+make -j20 all 
+arm-none-eabi-size  15.ATIM-PWMIN.elf 
+   text	   data	    bss	    dec	    hex	filename
+  48652	    472	   2248	  51372	   c8ac	15.ATIM-PWMIN.elf
+Finished building: default.size.stdout
+ 
+
+17:03:31 Build Finished. 0 errors, 0 warnings. (took 340ms)
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“4.USART/3.EXTI.ioc”重命名为“4.USART.ioc”" description="重命名资源“3.EXTI.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="3.EXTI.ioc" name="4.USART.ioc" stamp="1755756781087" updateReferences="true"/>
+</session>

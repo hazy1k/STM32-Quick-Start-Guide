@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“15.ATIM-PWMIN/14.ATIM-Deadband.ioc”重命名为“15.ATIM-PWMIN.ioc”" description="重命名资源“14.ATIM-Deadband.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="14.ATIM-Deadband.ioc" name="15.ATIM-PWMIN.ioc" stamp="1756711176737" updateReferences="true"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“26.FLASH/25.QSPI.ioc”重命名为“26.FLASH.ioc”" description="重命名资源“25.QSPI.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="25.QSPI.ioc" name="26.FLASH.ioc" stamp="1757602690364" updateReferences="true"/>
+</session>

@@ -1,0 +1,6 @@
+../BSP/I2C/eeprom.c:10:6:at24cxx_init	1
+../BSP/I2C/eeprom.c:20:9:at24cxx_read_one_byte	1
+../BSP/I2C/eeprom.c:65:6:at24cxx_write_one_byte	1
+../BSP/I2C/eeprom.c:102:9:at24cxx_check	3
+../BSP/I2C/eeprom.c:130:6:at24cxx_read	2
+../BSP/I2C/eeprom.c:145:6:at24cxx_write	2

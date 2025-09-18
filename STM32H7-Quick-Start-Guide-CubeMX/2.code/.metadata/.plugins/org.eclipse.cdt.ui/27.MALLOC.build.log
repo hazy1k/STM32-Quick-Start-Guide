@@ -1,0 +1,14 @@
+11:24:21 **** Incremental Build of configuration Debug for project 27.MALLOC ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DUSE_PWR_LDO_SUPPLY -DUSE_HAL_DRIVER -DSTM32H750xx -c -I../Core/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc -I../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../Drivers/CMSIS/Include -I"E:/StudyNote/study_STM32H7-MX/2.code/27.MALLOC/BSP" -I"E:/StudyNote/study_STM32H7-MX/2.code/27.MALLOC/BSP/LED" -I"E:/StudyNote/study_STM32H7-MX/2.code/27.MALLOC/BSP/KEY" -I"E:/StudyNote/study_STM32H7-MX/2.code/27.MALLOC/BSP/BEEP" -I"E:/StudyNote/study_STM32H7-MX/2.code/27.MALLOC/BSP/EXTI" -I"E:/StudyNote/study_STM32H7-MX/2.code/27.MALLOC/BSP/I2C" -I"E:/StudyNote/study_STM32H7-MX/2.code/27.MALLOC/BSP/Delay" -I"E:/StudyNote/study_STM32H7-MX/2.code/27.MALLOC/BSP/QSPI" -I"E:/StudyNote/study_STM32H7-MX/2.code/27.MALLOC/BSP/FLASH" -I"E:/StudyNote/study_STM32H7-MX/2.code/27.MALLOC/BSP/MALLOC" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "27.MALLOC.elf" @"objects.list"   -mcpu=cortex-m7 -T"E:\StudyNote\study_STM32H7-MX\2.code\27.MALLOC\STM32H750VBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="27.MALLOC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+E:/dianzi/STM32CubeIDE/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: 27.MALLOC.elf section `.RAM_D2' will not fit in region `FLASH'
+E:/dianzi/STM32CubeIDE/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: 27.MALLOC.elf section `.RAM_ITCM' will not fit in region `RAM_D1'
+E:/dianzi/STM32CubeIDE/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: region `FLASH' overflowed by 431828 bytes
+E:/dianzi/STM32CubeIDE/STM32CubeIDE_1.19.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.0.202411081344/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: region `RAM_D1' overflowed by 502720 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:74: 27.MALLOC.elf] Error 1
+"make -j20 all" terminated with exit code 2. Build might be incomplete.
+
+11:24:22 Build Failed. 5 errors, 0 warnings. (took 1s.105ms)
+

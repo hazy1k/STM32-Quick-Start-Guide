@@ -1,0 +1,10 @@
+../Core/Src/tim.c:33:6:MX_TIM2_Init	40	static
+../Core/Src/tim.c:77:6:MX_TIM3_Init	64	static
+../Core/Src/tim.c:131:6:MX_TIM5_Init	40	static
+../Core/Src/tim.c:172:6:MX_TIM6_Init	24	static
+../Core/Src/tim.c:205:6:HAL_TIM_Base_MspInit	56	static
+../Core/Src/tim.c:278:6:HAL_TIM_MspPostInit	40	static
+../Core/Src/tim.c:306:6:HAL_TIM_Base_MspDeInit	16	static
+../Core/Src/tim.c:378:10:tim2_get_count	16	static
+../Core/Src/tim.c:386:6:tim2_restart_count	4	static
+../Core/Src/tim.c:398:6:TIM2_IRQHandler	8	static

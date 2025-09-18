@@ -1,0 +1,10 @@
+10:53:13 **** Incremental Build of configuration Debug for project 13.ATIM-Output compare ****
+make -j20 all 
+arm-none-eabi-size  13.ATIM-Output\ compare.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36176	    108	   2532	  38816	   97a0	13.ATIM-Output compare.elf
+Finished building: default.size.stdout
+ 
+
+10:53:14 Build Finished. 0 errors, 0 warnings. (took 341ms)
+

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="将资源“6.WWDG/5.IWDG.ioc”重命名为“5.WWDG.ioc”" description="重命名资源“5.IWDG.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="5.IWDG.ioc" name="5.WWDG.ioc" stamp="1756016116464" updateReferences="true"/>&#x0A;<refactoring comment="将资源“6.WWDG/5.WWDG.ioc”重命名为“6.WWDG.ioc”" description="重命名资源“5.WWDG.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="5.WWDG.ioc" name="6.WWDG.ioc" stamp="1756016129628" updateReferences="true"/>
+</session>

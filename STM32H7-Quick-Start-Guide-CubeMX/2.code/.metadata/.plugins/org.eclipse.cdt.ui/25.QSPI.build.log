@@ -1,0 +1,10 @@
+14:44:17 **** Incremental Build of configuration Debug for project 25.QSPI ****
+make -j20 all 
+arm-none-eabi-size  25.QSPI.elf 
+   text	   data	    bss	    dec	    hex	filename
+  44468	    476	   6252	  51196	   c7fc	25.QSPI.elf
+Finished building: default.size.stdout
+ 
+
+14:44:17 Build Finished. 0 errors, 0 warnings. (took 393ms)
+

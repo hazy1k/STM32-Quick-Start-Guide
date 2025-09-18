@@ -1,0 +1,4 @@
+../Core/Src/main.c:65:5:main	16	static
+../Core/Src/main.c:117:6:SystemClock_Config	120	static
+../Core/Src/main.c:178:6:MPU_Config	24	static
+../Core/Src/main.c:209:6:Error_Handler	4	static,ignoring_inline_asm

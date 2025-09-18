@@ -1,0 +1,11 @@
+../Core/Src/sdmmc.c:11:6:sys_nvic_set_vector_table	16	static
+../Core/Src/sdmmc.c:22:6:sys_wfi_set	4	static,ignoring_inline_asm
+../Core/Src/sdmmc.c:32:6:sys_intx_disable	4	static,ignoring_inline_asm
+../Core/Src/sdmmc.c:42:6:sys_intx_enable	4	static,ignoring_inline_asm
+../Core/Src/sdmmc.c:53:6:sys_msr_msp	24	static,ignoring_inline_asm
+../Core/Src/sdmmc.c:66:9:sd_init	16	static
+../Core/Src/sdmmc.c:96:6:HAL_SD_MspInit	64	static
+../Core/Src/sdmmc.c:136:9:get_sd_card_info	24	static
+../Core/Src/sdmmc.c:149:9:get_sd_card_state	8	static
+../Core/Src/sdmmc.c:161:9:sd_read_disk	56	static
+../Core/Src/sdmmc.c:191:9:sd_write_disk	56	static

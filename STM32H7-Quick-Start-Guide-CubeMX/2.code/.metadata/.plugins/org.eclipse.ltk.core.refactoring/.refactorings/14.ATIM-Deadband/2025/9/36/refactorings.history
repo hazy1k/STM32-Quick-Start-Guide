@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“14.ATIM-Deadband/13.ATIM-Output compare.ioc”重命名为“14.ATIM-Deadband.ioc”" description="重命名资源“13.ATIM-Output compare.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="13.ATIM-Output compare.ioc" name="14.ATIM-Deadband.ioc" stamp="1756708386035" updateReferences="true"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“23.DAC/22.ADC.ioc”重命名为“23.DAC.ioc”" description="重命名资源“22.ADC.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="22.ADC.ioc" name="23.DAC.ioc" stamp="1757392936505" updateReferences="true"/>
+</session>

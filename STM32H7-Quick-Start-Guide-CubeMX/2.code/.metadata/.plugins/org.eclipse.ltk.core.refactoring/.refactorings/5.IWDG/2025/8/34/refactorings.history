@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“5.IWDG/4.USART.ioc”重命名为“5.IWDG.ioc”" description="重命名资源“4.USART.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="4.USART.ioc" name="5.IWDG.ioc" stamp="1755826914599" updateReferences="true"/>
+</session>

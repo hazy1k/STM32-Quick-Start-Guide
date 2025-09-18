@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“20.PWR-Sleep/19.RNG.ioc”重命名为“20.PWR-Sleep.ioc”" description="重命名资源“19.RNG.ioc”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="19.RNG.ioc" name="20.PWR-Sleep.ioc" stamp="1757124810743" updateReferences="true"/>
+</session>

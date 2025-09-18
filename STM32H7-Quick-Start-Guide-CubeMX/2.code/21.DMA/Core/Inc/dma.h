@@ -1,0 +1,19 @@
+#ifndef __DMA_H__
+#define __DMA_H__
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include "main.h"
+
+void MX_DMA_Init(DMA_Stream_TypeDef *dma_stream_handle, uint32_t ch);
+
+extern DMA_HandleTypeDef dma_handle;
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __DMA_H__ */
+

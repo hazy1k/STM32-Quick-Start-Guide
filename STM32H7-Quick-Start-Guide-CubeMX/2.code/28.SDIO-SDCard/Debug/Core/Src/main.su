@@ -1,0 +1,8 @@
+../Core/Src/main.c:15:6:show_sdcard_info	64	static
+../Core/Src/main.c:59:6:sd_test_read	536	static
+../Core/Src/main.c:92:6:sd_test_write	536	static
+../Core/Src/main.c:115:5:main	16	static
+../Core/Src/main.c:151:6:SystemClock_Config	120	static
+../Core/Src/main.c:213:6:PeriphCommonClock_Config	200	static
+../Core/Src/main.c:233:6:MPU_Config	24	static
+../Core/Src/main.c:264:6:Error_Handler	4	static,ignoring_inline_asm

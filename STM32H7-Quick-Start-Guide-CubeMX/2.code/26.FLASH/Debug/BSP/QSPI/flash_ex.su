@@ -1,0 +1,10 @@
+../BSP/QSPI/flash_ex.c:16:6:sys_wfi_set	4	static,ignoring_inline_asm
+../BSP/QSPI/flash_ex.c:26:6:sys_intx_disable	4	static,ignoring_inline_asm
+../BSP/QSPI/flash_ex.c:36:6:sys_intx_enable	4	static,ignoring_inline_asm
+../BSP/QSPI/flash_ex.c:48:13:norflash_ex_enter_mmap	16	static
+../BSP/QSPI/flash_ex.c:84:16:norflash_ex_exit_mmap	24	static,ignoring_inline_asm
+../BSP/QSPI/flash_ex.c:113:9:norflash_ex_write	32	static
+../BSP/QSPI/flash_ex.c:136:6:norflash_ex_read	32	static
+../BSP/QSPI/flash_ex.c:155:10:norflash_ex_read_id	16	static
+../BSP/QSPI/flash_ex.c:178:6:norflash_ex_erase_sector	24	static
+../BSP/QSPI/flash_ex.c:198:6:norflash_ex_erase_chip	16	static
