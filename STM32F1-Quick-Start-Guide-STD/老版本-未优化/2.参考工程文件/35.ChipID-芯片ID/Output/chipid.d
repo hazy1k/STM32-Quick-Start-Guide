@@ -1,0 +1,14 @@
+..\output\chipid.o: ..\User\chipid\chipid.c
+..\output\chipid.o: ..\User\chipid\chipid.h
+..\output\chipid.o: ..\Libraries\CMSIS\stm32f10x.h
+..\output\chipid.o: ..\Libraries\CMSIS\core_cm3.h
+..\output\chipid.o: E:\dianzi\MDKv5\ARM\AC5\Bin\..\include\stdint.h
+..\output\chipid.o: ..\Libraries\CMSIS\system_stm32f10x.h
+..\output\chipid.o: ..\User\stm32f10x_conf.h
+..\output\chipid.o: ..\Libraries\FWlib\inc\stm32f10x_adc.h
+..\output\chipid.o: ..\Libraries\CMSIS\stm32f10x.h
+..\output\chipid.o: ..\Libraries\FWlib\inc\stm32f10x_dma.h
+..\output\chipid.o: ..\Libraries\FWlib\inc\stm32f10x_gpio.h
+..\output\chipid.o: ..\Libraries\FWlib\inc\stm32f10x_rcc.h
+..\output\chipid.o: ..\Libraries\FWlib\inc\stm32f10x_usart.h
+..\output\chipid.o: ..\Libraries\FWlib\inc\misc.h

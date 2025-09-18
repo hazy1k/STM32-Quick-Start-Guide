@@ -1,0 +1,36 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "flash.h": "c",
+            "lcd.h": "c",
+            "stm32f10x.h": "c",
+            "fonts.h": "c",
+            "usart.h": "c",
+            "stdio.h": "c"
+        },
+        "MicroPython.executeButton": [
+            {
+                "text": "▶",
+                "tooltip": "运行",
+                "alignment": "left",
+                "command": "extension.executeFile",
+                "priority": 3.5
+            }
+        ],
+        "MicroPython.syncButton": [
+            {
+                "text": "$(sync)",
+                "tooltip": "同步",
+                "alignment": "left",
+                "command": "extension.execute",
+                "priority": 4
+            }
+        ]
+    },
+    "extensions": {}
+}

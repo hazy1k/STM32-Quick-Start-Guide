@@ -1,0 +1,63 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.autoGuessEncoding": true,
+        "C_Cpp.default.configurationProvider": "cl.eide",
+        "C_Cpp.errorSquiggles": "disabled",
+        "files.associations": {
+            ".eideignore": "ignore",
+            "*.a51": "a51",
+            "*.h": "c",
+            "*.c": "c",
+            "*.hxx": "cpp",
+            "*.hpp": "cpp",
+            "*.c++": "cpp",
+            "*.cpp": "cpp",
+            "*.cxx": "cpp",
+            "*.cc": "cpp"
+        },
+        "[yaml]": {
+            "editor.insertSpaces": true,
+            "editor.tabSize": 4,
+            "editor.autoIndent": "advanced"
+        },
+        "MicroPython.executeButton": [
+            {
+                "text": "▶",
+                "tooltip": "运行",
+                "alignment": "left",
+                "command": "extension.executeFile",
+                "priority": 3.5
+            }
+        ],
+        "MicroPython.syncButton": [
+            {
+                "text": "$(sync)",
+                "tooltip": "同步",
+                "alignment": "left",
+                "command": "extension.execute",
+                "priority": 4
+            }
+        ]
+    },
+    "extensions": {
+        "recommendations": [
+            "cl.eide",
+            "keroc.hex-fmt",
+            "xiaoyongdong.srecord",
+            "hars.cppsnippets",
+            "zixuanwang.linkerscript",
+            "redhat.vscode-yaml",
+            "IBM.output-colorizer",
+            "cschlosser.doxdocgen",
+            "ms-vscode.vscode-serial-monitor",
+            "alefragnani.project-manager",
+            "dan-c-underwood.arm",
+            "marus25.cortex-debug"
+        ]
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "MicroPython.executeButton": [
+            {
+                "text": "▶",
+                "tooltip": "运行",
+                "alignment": "left",
+                "command": "extension.executeFile",
+                "priority": 3.5
+            }
+        ],
+        "MicroPython.syncButton": [
+            {
+                "text": "$(sync)",
+                "tooltip": "同步",
+                "alignment": "left",
+                "command": "extension.execute",
+                "priority": 4
+            }
+        ],
+        "files.associations": {
+            "*.m": "matlab",
+            "bsp_beep.h": "c",
+            "bsp_key.h": "c",
+            "bsp_ili9341_lcd.h": "c",
+            "stm32f10x.h": "c",
+            "bsp_calendar.h": "c",
+            "bsp_date.h": "c",
+            "bsp_usart.h": "c",
+            "bsp_rtc.h": "c"
+        }
+    },
+    "extensions": {}
+}
