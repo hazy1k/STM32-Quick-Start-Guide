@@ -1,0 +1,95 @@
+project:
+  packs:
+    - pack: Keil::STM32F4xx_DFP@^2.13.0
+  setups:
+    - setup: Options for Template
+      processor:
+        fpu: sp
+      add-path:
+        - ../Libraries
+        - ../Libraries/CMSIS/Include
+        - ../Libraries/CMSIS/Device/ST/STM32F4xx/Include
+        - ../Libraries/STM32F4xx_HAL_Driver/Inc
+        - ../User
+        - ../User/BSP
+        - ../User/SYSTEM/delay
+        - ../User/SYSTEM/sys
+        - ../User/SYSTEM/usart
+        - ../User/BSP/led
+        - ../User/BSP/key
+        - ../User/BSP/atim
+      debug: "on"
+      define:
+        - USE_HAL_DRIVER
+        - STM32F407xx
+      misc:
+        - C:
+            - -std=c99
+          C-CPP:
+            - -fno-rtti
+            - -funsigned-char
+            - -fshort-enums
+            - -fshort-wchar
+            - -ffunction-sections
+            - -w
+          CPP:
+            - -xc++
+            - -std=c++03
+            - -fno-exceptions
+          ASM:
+            - -masm=auto
+          Link:
+            - --map
+            - --load_addr_map_info
+            - --xref
+            - --callgraph
+            - --symbols
+            - --info sizes
+            - --info totals
+            - --info unused
+            - --info veneers
+            - --strict
+            - --summary_stderr
+            - --info summarysizes
+  linker:
+    - script: STM32F4_Template.sct
+  groups:
+    - group: Start
+      files:
+        - file: ../Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s
+    - group: Libs
+      files:
+        - file: ../Libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
+        - file: ../Libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
+        - file: ../Libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c
+        - file: ../Libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c
+        - file: ../Libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
+        - file: ../Libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c
+        - file: ../Libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.c
+        - file: ../Libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c
+        - file: ../Libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c
+        - file: ../Libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
+        - file: ../Libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c
+        - file: ../Libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
+        - file: ../Libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
+        - file: ../Libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fsmc.c
+        - file: ../Libraries/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c
+    - group: User/System
+      files:
+        - file: ../User/SYSTEM/delay/delay.c
+        - file: ../User/SYSTEM/sys/sys.c
+        - file: ../User/SYSTEM/usart/usart.c
+    - group: User
+      files:
+        - file: ../User/main.c
+        - file: ../User/stm32f4xx_it.c
+        - file: ../Libraries/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+    - group: User/BSP
+      files:
+        - file: ../User/BSP/led/led.c
+        - file: ../User/BSP/bsp_init.c
+        - file: ../User/BSP/key/key.c
+        - file: ../User/BSP/atim/atim.c
+    - group: README
+      files:
+        - file: ../README.md
