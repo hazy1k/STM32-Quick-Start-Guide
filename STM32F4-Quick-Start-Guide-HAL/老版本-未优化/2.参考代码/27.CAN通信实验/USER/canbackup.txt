@@ -1,0 +1,131 @@
+#include "can.h"
+#include "usart.h"
+#include "delay.h"
+#include "led.h"
+//////////////////////////////////////////////////////////////////////////////////
+//本程序只供学习使用，未经作者许可，不得用于其它任何用途
+//ALIENTEK STM32F407开发板
+//CAN驱动代码
+//正点原子@ALIENTEK
+//技术论坛:www.openedv.com
+//创建日期:2017/4/14
+//版本：V1.0
+//版权所有，盗版必究。
+//Copyright(C) 广州市星翼电子科技有限公司 2014-2024
+//All rights reserved
+//////////////////////////////////////////////////////////////////////////////////
+CAN_HandleTypeDef	CAN1_Handler;   //CAN1句柄
+CAN_TxHeaderTypeDef	TxHeader;      //发送
+CAN_RxHeaderTypeDef	RxHeader;      //接收
+
+////CAN初始化
+//tsjw:重新同步跳跃时间单元.范围:CAN_SJW_1TQ~CAN_SJW_4TQ
+//tbs2:时间段2的时间单元.   范围:CAN_BS2_1TQ~CAN_BS2_8TQ;
+//tbs1:时间段1的时间单元.   范围:CAN_BS1_1TQ~CAN_BS1_16TQ
+//brp :波特率分频器.范围:1~1024; tq=(brp)*tpclk1
+//波特率=Fpclk1/((tbs1+tbs2+1)*brp); 其中tbs1和tbs2我们只用关注标识符上标志的序号，例如CAN_BS2_1TQ，我们就认为tbs2=1来计算即可。
+//mode:CAN_MODE_NORMAL,普通模式;CAN_MODE_LOOPBACK,回环模式;
+//Fpclk1的时钟在初始化的时候设置为42M,如果设置CAN1_Mode_Init(CAN_SJW_1tq,CAN_BS2_6tq,CAN_BS1_7tq,6,CAN_MODE_LOOPBACK);
+//则波特率为:42M/((6+7+1)*6)=500Kbps
+//返回值:0,初始化OK;
+//    其他,初始化失败;
+
+u8 CAN1_Mode_Init(u32 tsjw,u32 tbs2,u32 tbs1,u16 brp,u32 mode)
+{
+    u8 res = 0;
+    CAN_FilterTypeDef    sFilterConfig;
+    CAN1_Handler.Instance=CAN1;
+    CAN1_Handler.Init.Prescaler=brp;				//分频系数(Fdiv)为brp+1
+    CAN1_Handler.Init.Mode=mode;					//模式设置
+    CAN1_Handler.Init.SyncJumpWidth=tsjw;			//重新同步跳跃宽度(Tsjw)为tsjw+1个时间单位 CAN_SJW_1TQ~CAN_SJW_4TQ
+    CAN1_Handler.Init.TimeSeg1=tbs1;				//tbs1范围CAN_BS1_1TQ~CAN_BS1_16TQ
+    CAN1_Handler.Init.TimeSeg2=tbs2;				//tbs2范围CAN_BS2_1TQ~CAN_BS2_8TQ
+    CAN1_Handler.Init.TimeTriggeredMode=DISABLE;	//非时间触发通信模式
+    CAN1_Handler.Init.AutoBusOff=DISABLE;			//软件自动离线管理
+    CAN1_Handler.Init.AutoWakeUp=DISABLE;			//睡眠模式通过软件唤醒(清除CAN->MCR的SLEEP位)
+    CAN1_Handler.Init.AutoRetransmission=ENABLE;	//禁止报文自动传送
+    CAN1_Handler.Init.ReceiveFifoLocked=DISABLE;	//报文不锁定,新的覆盖旧的
+    CAN1_Handler.Init.TransmitFifoPriority=DISABLE;	//优先级由报文标识符决定
+
+    if(HAL_CAN_Init(&CAN1_Handler)!=HAL_OK)			//初始化
+    {
+        res = 1;
+    }
+
+    /*CAN过滤器初始化*/
+    sFilterConfig.FilterBank = 0;						// 过滤器组0
+    sFilterConfig.FilterMode = CAN_FILTERMODE_IDMASK;	// 工作在标识符屏蔽位模式
+    sFilterConfig.FilterScale = CAN_FILTERSCALE_32BIT;	// 过滤器位宽为32位
+    sFilterConfig.FilterIdHigh = 0x0000;				// 要过滤的ID高位
+    sFilterConfig.FilterIdLow = 0x0000;					// 要过滤的ID低位
+    sFilterConfig.FilterMaskIdHigh = 0x0000;			// 过滤器高16位
+    sFilterConfig.FilterMaskIdLow = 0x0000;				// 过滤器低16位
+    sFilterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;	// 过滤器被关联到FIFO 0
+    sFilterConfig.FilterActivation = ENABLE;			// 使能过滤器
+    sFilterConfig.SlaveStartFilterBank = 14;			// 过滤器的寄存器编号
+
+    HAL_CAN_ConfigFilter(&CAN1_Handler, &sFilterConfig);
+
+    return res;
+}
+
+//CAN底层驱动，引脚配置，时钟配置，中断配置
+//此函数会被HAL_CAN_Init()调用
+//hcan:CAN句柄
+void HAL_CAN_MspInit(CAN_HandleTypeDef* hcan)
+{
+    GPIO_InitTypeDef GPIO_Initure;
+
+    __HAL_RCC_CAN1_CLK_ENABLE();                //使能CAN1时钟
+    __HAL_RCC_GPIOA_CLK_ENABLE();			    //开启GPIOA时钟
+
+    GPIO_Initure.Pin=GPIO_PIN_11|GPIO_PIN_12;   //PA11,12
+    GPIO_Initure.Mode=GPIO_MODE_AF_PP;          //推挽复用
+    GPIO_Initure.Pull=GPIO_PULLUP;              //上拉
+    GPIO_Initure.Speed=GPIO_SPEED_FAST;         //快速
+    GPIO_Initure.Alternate=GPIO_AF9_CAN1;       //复用为CAN1
+    HAL_GPIO_Init(GPIOA,&GPIO_Initure);         //初始化
+	
+	/* 初始化中断优先级 */
+    HAL_NVIC_SetPriority(CAN1_RX0_IRQn, 0, 0);
+    HAL_NVIC_EnableIRQ(CAN1_RX0_IRQn);
+}
+
+//can发送一组数据(固定格式:ID为0X12,标准帧,数据帧)
+//len:数据长度(最大为8)
+//msg:数据指针,最大为8个字节.
+//返回值:0,成功;
+//		 其他,失败;
+u8 CAN1_Send_Msg(u8* msg,u8 len)
+{
+    u8 res=0;
+	uint32_t TxMailbox;
+	
+    TxHeader.ExtId = 0x1234;
+    TxHeader.RTR = CAN_RTR_DATA;
+    TxHeader.IDE = CAN_ID_EXT;
+    TxHeader.DLC = len;
+    TxHeader.TransmitGlobalTime = DISABLE;
+
+    /* 发送数据 */
+    if(HAL_CAN_AddTxMessage(&CAN1_Handler, &TxHeader, msg, &TxMailbox) != HAL_OK)
+    {
+		res = 1;
+    }
+    return res;
+}
+
+//can口接收数据查询
+//buf:数据缓存区;
+//返回值:0,无数据被收到;
+//		 其他,接收的数据长度;
+u8 CAN1_Receive_Msg(u8 *buf)
+{
+	u8 len = 0;
+    HAL_CAN_GetRxFifoFillLevel(&CAN1_Handler, CAN_RX_FIFO0);
+	if(HAL_CAN_GetRxMessage(&CAN1_Handler, CAN_RX_FIFO0, &RxHeader, buf) == HAL_OK)
+	{
+		len = RxHeader.DLC;
+	}
+	return len;
+}
