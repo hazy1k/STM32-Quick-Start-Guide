@@ -1,0 +1,55 @@
+void LCD_Init_LGDP4531(kal_uint32 bkground, void **buf_addr)   
+{   
+    volatile kal_uint32 i;   
+    kal_uint16 background = (kal_uint16)bkground;   
+    kal_uint16 read_data;   
+   
+    CLEAR_LCD_CTRL_RESET_PIN;   
+    LCD_Delay(0x1000);   
+    SET_LCD_CTRL_RESET_PIN;   
+    LCD_Delay(0x1000);   
+LCD_set_reg_LGDP4531(0X00,0X0001);   
+LCD_Delay(50);   
+LCD_set_reg_LGDP4531(0X10,0X1628);   
+LCD_set_reg_LGDP4531(0X12,0X000e);//0x0006    
+LCD_set_reg_LGDP4531(0X13,0X0A39);   
+LCD_Delay (10);   
+LCD_set_reg_LGDP4531(0X11,0X0040);   
+LCD_set_reg_LGDP4531(0X15,0X0050);   
+LCD_Delay(40);   
+LCD_set_reg_LGDP4531(0X12,0X001e);//16    
+LCD_Delay(40);   
+LCD_set_reg_LGDP4531(0X10,0X1620);   
+LCD_set_reg_LGDP4531(0X13,0X2A39);   
+LCD_Delay(10);   
+LCD_set_reg_LGDP4531(0X01,0X0100);   
+LCD_set_reg_LGDP4531(0X02,0X0300);   
+LCD_set_reg_LGDP4531(0X03,0X1030);   
+LCD_set_reg_LGDP4531(0X08,0X0202);   
+LCD_set_reg_LGDP4531(0X0A,0X0008);   
+LCD_set_reg_LGDP4531(0X30,0X0000);   
+LCD_set_reg_LGDP4531(0X31,0X0402);   
+LCD_set_reg_LGDP4531(0X32,0X0106);   
+LCD_set_reg_LGDP4531(0X33,0X0503);   
+LCD_set_reg_LGDP4531(0X34,0X0104);   
+LCD_set_reg_LGDP4531(0X35,0X0301);   
+LCD_set_reg_LGDP4531(0X36,0X0707);   
+LCD_set_reg_LGDP4531(0X37,0X0305);   
+LCD_set_reg_LGDP4531(0X38,0X0208);   
+LCD_set_reg_LGDP4531(0X39,0X0F0B);   
+LCD_set_reg_LGDP4531(0X41,0X0002);   
+LCD_set_reg_LGDP4531(0X60,0X2700);   
+LCD_set_reg_LGDP4531(0X61,0X0001);   
+LCD_set_reg_LGDP4531(0X90,0X0210);   
+LCD_set_reg_LGDP4531(0X92,0X010A);   
+LCD_set_reg_LGDP4531(0X93,0X0004);   
+LCD_set_reg_LGDP4531(0XA0,0X0100);   
+LCD_set_reg_LGDP4531(0X07,0X0001);   
+LCD_set_reg_LGDP4531(0X07,0X0021);   
+LCD_set_reg_LGDP4531(0X07,0X0023);   
+LCD_set_reg_LGDP4531(0X07,0X0033);   
+LCD_set_reg_LGDP4531(0X07,0X0133);   
+LCD_set_reg_LGDP4531(0XA0,0X0000);   
+   
+//  LCD_ClearAll_LGDP4531(0x0000);    
+}   
