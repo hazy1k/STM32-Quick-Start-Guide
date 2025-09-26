@@ -1,0 +1,7 @@
+为了精简例程压缩包容量，
+
+请直接在 STM32CubeMX ->  Help -> Manage embedded software packages 下载需要的HAL库包最新版本即可
+
+下载后的位置在 STM32CubeMX ->  Help -> Updater Settings -> Repository Folder 设置
+
+
