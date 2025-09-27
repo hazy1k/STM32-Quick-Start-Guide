@@ -1,0 +1,6 @@
+--c99 -c --cpu Cortex-M3 -D__MICROLIB -g -O1 --apcs=interwork -I ..\..\Libraries\CMSIS -I ..\..\User -I ..\..\Libraries\FWlib\inc -I ..\..\FreeRTOS\include -I ..\..\FreeRTOS\port\RVDS\ARM_CM3 -I ..\..\User\led -I ..\..\User\usart -I ..\..\User\Key -I ..\..\User\liuwei -I ..\..\User\liuwei\drv_inc -I ..\..\User\liuwei\spi_flash -I ..\..\User\liuwei\System_Drv -I ..\..\User\liuwei\X_GUI_Drv -I ..\..\..\..\..\emXGUI_Lib\inc -I ..\..\..\..\..\emXGUI_Lib\drv -I ..\..\..\..\..\emXGUI_Lib\app\base -I ..\..\..\..\..\emXGUI_Lib\arch\Inc -I ..\..\..\..\..\emXGUI_Lib -I ..\..\User\bsp -I ..\..\..\..\..\emXGUI_Lib\arch -I ..\..\User\bsp\drv_inc -I ..\..\User\bsp\LCD -I ..\..\User\bsp
+-I.\RTE\_Fire_FreeRTOS
+-IF:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include
+-IF:\Keil\ARM\CMSIS\Include
+-D__UVISION_VERSION="528" -DSTM32F10X_HD -DSTM32F10X_HD -DX_GUI_USE_FREERTOS -DUSE_STDPERIPH_DRIVER
+-o ..\..\output\stm32f10x_crc.o --omf_browse ..\..\output\stm32f10x_crc.crf --depend ..\..\output\stm32f10x_crc.d --feedback "..\..\Output\Fire_FreeRTOS.fed" "..\..\Libraries\FWlib\src\stm32f10x_crc.c"
