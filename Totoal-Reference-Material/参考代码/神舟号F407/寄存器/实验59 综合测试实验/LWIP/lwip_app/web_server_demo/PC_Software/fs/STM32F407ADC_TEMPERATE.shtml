@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html><head><title>STM32F407探索者ADC</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="refresh" content="1">
+<meta content="MSHTML 6.00.2900.3698" name="GENERATOR">
+<style>
+a:link {
+	color: #FFF;
+}
+a:visited {
+	color: #FFF;
+}
+a:hover {
+	color: #F00;
+	font-size: 24px;
+}
+</style><!-- saved from url=(0038)http://192.168.0.10/STM32F107ADC.shtml --></head>
+<body>
+<h4><small style="font-family: Verdana;"><small><big><big><big style="font-weight: bold;"><big><strong><em><span style="font-style: italic;">STM32F407 探索者ADC转换和内部温度传感器</span></em></strong></big></big></big></big></small></small></h4>
+<hr style="width: 100%; height: 2px;">
+<span style="font-weight: bold;"></span><span style="font-weight: bold;">
+<table width="1485" height="49" border="1" cellpadding="2" cellspacing="2" style="width: 961px; height: 30px;">
+<tbody>
+<tr>
+<td width="115" style="font-weight: bold; font-style: italic; font-family: Verdana; background-color: rgb(51, 51, 255); text-align: center;"><small><a href="index.html" style="font-size: 24px">主页</a><a href="/index.html"></a></small></td>
+<td width="199" style="font-weight: bold; font-style: italic; font-family: Verdana; background-color: rgb(51, 51, 255); text-align: center;"><small><a href="STM32F407LED_BEEP.html" style="font-size: 24px">LED/BEEP控制</a><a href="STM32F4x7LED.html"></a><a href="STM32F4x7LED.html" target="new"></a><a href="/STM32F4x7LED.html"></a></small></td>
+<td width="403" style="font-weight: bold; font-style: italic; font-family: Verdana; background-color: rgb(51, 51, 255); text-align: center;"><a href="STM32F407ADC_TEMPERATE.shtml" style="font-size: 24px">ADC转换/内部温度传感器</a></td>
+<td width="208" style="font-weight: bold; font-style: italic; font-family: Verdana; background-color: rgb(51, 51, 255); text-align: center;"><a href="STM32F407RTC.shtml" style="font-size: 24px">RTC</a></td>
+</tr>
+</tbody>
+</table>
+</span><small><span style="font-family: Verdana;"></span><span style="font-family: Verdana;"><br></span></small>
+<dl>
+<dt><small style="font-family: Verdana;">这个页面用来显示开发板上的ADC电压值和内部温度传感器值</small><small style="font-family: Verdana;"></small><br>
+  <span style="font-family: Verdana;"></span><span style="font-family: Verdana;"></span></dt>
+</dl>
+<table width="225" border="1" cellpadding="5" cellspacing="1">
+  <tbody>
+<tr>
+<td width="174"><span style="font-family: Verdana">ADC1_CH5电压值</span></td>
+<td width="22"><!--#t--><small><span style="font-family: Verdana;">mv</span></small> </td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table width="225" border="1" cellpadding="7" cellspacing="1">
+  <tr>
+    <td width="174"><span style="font-family: Verdana">内部温度传感器值</span></td>
+    <td nowrap="nowrap"><!--#w--><small><span style="font-family: Verdana">&deg;C</span></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3 style="font-weight: normal;"><br>
+  <font size="-1"><span style="color: black;"></span></font><span style="font-family: Verdana;"></span><a style="font-family: Verdana;" href="/STM32F107.html"><big><span style="font-weight: bold;"></span></big></a><font size="-1"><span style="color: black;">_______________________________________________________________________________________________________________<br>
+  </span></font><font class="footmsg">&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;
+<comment title="#config timefmt=&quot;%Y&quot; " xmlns="http://disruptive-innovations.com/zoo/nvu"><!--#config timefmt="%Y" --></comment>
+<comment title="#echo var=&quot;DATE_GMT&quot; " xmlns="http://disruptive-innovations.com/zoo/nvu"><!--#echo var="DATE_GMT" --></comment>
+<span style="color: silver;">&nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;All rights
+reserved © 2014 广州星翼电子科技有限公司</span>&nbsp;</font></h3>
+</body></html>

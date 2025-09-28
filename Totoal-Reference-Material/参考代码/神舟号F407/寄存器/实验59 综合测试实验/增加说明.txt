@@ -1,0 +1,4 @@
+程序增加部分：
+
+1.sram.c引用 #include "XMRAM.h"	
+2.在FSMC_SRAM_Init初始化增加函数：   XmRamInit(); 
