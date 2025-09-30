@@ -1,0 +1,113 @@
+#! armcc -E
+;#! armclang -E --target=arm-arm-none-eabi -mcpu=cortex-m7 -xc
+/* 使用说明 
+! armclang -E --target=arm-arm-none-eabi -mcpu=cortex-m7 -xc， 用于AC6编译报错（L6709E错误）时，请使用此设置
+！armcc -E， 用于AC5编译报错（L6709E错误）时，请使用此设置
+注意，设置必须放本文件第一行！否则还是报错！请注意调整顺序！
+*/
+
+/**
+ ****************************************************************************************************
+ * @file     main.c
+ * @author   正点原子团队(ALIENTEK)
+ * @version  V1.0
+ * @date     2020-03-13
+ * @brief    STM32H750分散加载文件(.scf文件)
+ * @license  Copyright (c) 2020-2032, 广州市星翼电子科技有限公司
+ ****************************************************************************************************
+ * @attention
+ *
+ * 实验平台:正点原子 Mini Pro H750开发板
+ * 在线视频:www.yuanzige.com
+ * 技术论坛:www.openedv.com
+ * 公司网址:www.alientek.com
+ * 购买地址:openedv.taobao.com
+ *
+ ****************************************************************************************************
+ */
+
+
+#define m_stmflash_start                0X08000000      /* m_stmflash(STM32内部FLASH)域起始地址 */
+#define m_stmflash_size                 0X20000         /* m_stmflash(STM32内部FLASH)大小,H750是128KB */
+
+#define m_qspiflash_start               0X90000000      /* m_qspiflash(外扩QSPI FLASH)域起始地址 */
+#define m_qspiflash_size                0X800000        /* m_qspiflash(外扩QSPI FLASH)大小,W25Q64是8MB */
+
+#define m_stmsram_start                 0X24000000      /* m_stmsram(STM32内部RAM)域起始地址,定义在D1,AXI SRAM */
+#define m_stmsram_size                  0X80000         /* m_stmsram(STM32内部RAM)大小,AXI SRAM共512KB */
+
+
+
+LR_m_stmflash m_stmflash_start m_stmflash_size          /* LR_m_stmflash加载域  */
+{
+    ER_m_stmflash m_stmflash_start m_stmflash_size {    /* ER_m_stmfalsh运行域,起始地址为:m_stmflash_start,大小为:m_stmflash_size  */
+        *.o (RESET, +First)                             /* 优先(+FIRST)将RESET(中断向量表)段放这个域,实际上就是把中断向量表拷贝到m_stmflash_start */
+                                                        /* RESET是一个段名,表示中断向量表(在.s文件定义);+FIRST表示时第一个要加载的. */
+        * (InRoot$$Sections)                            /* 将所有的库段(C/C++标准库)放在root region.如__main.o,__scatter*.o等 */
+        * (Veneer$$Code)
+        libinit.o
+        libinit2.o
+        libshutdown.o
+        libshutdown2.o
+        __rtentry.o
+        __rtentry2.o
+        __rtentry4.o
+        rtexit.o
+        rtexit2.o
+
+        use_no_semi_2.o
+        heapauxi.o
+        use_no_semi.o
+        sys_stackheap_outer.o
+        exit.o
+        libspace.o
+        fpinit.o
+        lludivv7m.o
+        startup_stm32h750xx.o
+
+        rt_locale_intlibspace.o
+        lc_numeric_c.o
+        lc_ctype_c.o
+
+        main.o
+        sys.o
+        usart.o
+        delay.o
+        pwr.o
+
+        /* H7的QSPI接口不支持读时写,因此必须把以下3个文件放到内部FLASH,以保证可以对QSPI FLASH的写入 */
+        qspi.o
+        norflash.o
+        norflash_ex.o
+
+        /* 针对HAL库驱动添加到内部的文件 */
+        system_stm32h7xx.o
+        stm32h7xx_hal.o
+        stm32h7xx_hal_cortex.o
+        stm32h7xx_hal_rcc.o
+        stm32h7xx_hal_rcc_ex.o
+        stm32h7xx_hal_gpio.o
+        stm32h7xx_hal_dma.o
+        stm32h7xx_hal_dma_ex.o
+        stm32h7xx_hal_qspi.o
+        stm32h7xx_hal_pwr.o
+        stm32h7xx_hal_pwr_ex.o
+    }
+    RW_m_stmsram m_stmsram_start m_stmsram_size {       /* RW_m_stmsram运行域,起始地址为:m_stmsram_start,大小为:m_stmsram_size. */
+        .ANY (+RW + ZI)                                 /* 将所有用到的RAM都放在这个区域 */
+    }
+}
+
+LR_m_qspiflash m_qspiflash_start m_qspiflash_size       /* LR_m_qspiflash加载域 */
+{
+    ER_m_qspiflash m_qspiflash_start m_qspiflash_size { /* ER_m_qspiflash加载域,起始地址为:m_qspiflash_start,大小为:m_qspiflash_size */
+        .ANY (+RO)                                      /* 将只读数据(+RO)放这个域,任意分配.相当于程序就是存放在这个域的. */
+    }
+}
+
+
+
+
+
+
+
