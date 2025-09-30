@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SimulationTrial" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="Exe/GUISimulationDebug" prefix_auto="1" extension_auto="1" />
+				<Option object_output="oD/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-w" />
+					<Add option="-g" />
+					<Add directory="Config" />
+					<Add directory="GUI/Include" />
+					<Add directory="System/Simulation" />
+					<Add directory="System/Simulation/SIM_GUI" />
+					<Add directory="System/Simulation/Res" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="System/Simulation/Res" />
+					<Add directory="System/Simulation" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="GUI/Library/GUI.a" />
+					<Add library="libgdi32.a" />
+					<Add library="libwinmm.a" />
+					<Add library="libwsock32.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="Exe/GUISimulation" prefix_auto="1" extension_auto="1" />
+				<Option object_output="oR/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-w" />
+					<Add directory="Config" />
+					<Add directory="GUI/Include" />
+					<Add directory="System/Simulation" />
+					<Add directory="System/Simulation/SIM_GUI" />
+					<Add directory="System/Simulation/Res" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="Simulation/SIM_GUI/Branding/Segger" />
+					<Add directory="System/Simulation/Res" />
+					<Add directory="System/Simulation" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="GUI/Library/GUI.a" />
+					<Add library="libgdi32.a" />
+					<Add library="libwinmm.a" />
+					<Add library="libwsock32.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add library="Simulation/SimulationMinGW.res" />
+			<Add library="GUI/Library/GUI.a" />
+			<Add library="Simulation/GUISim.a" />
+		</Linker>
+		<Unit filename="Application/BackgroundWindow_480x272.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Background_480x272.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/GUIDEMO.h" />
+		<Unit filename="Application/Icon_ES_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_Flasher_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_IoT_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_JLink_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_Ozone_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_SysView_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_emCompress_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_emCrypt_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_emFTP_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_emFile_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_emLib_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_emLoad_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_emMQTT_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_emModbus_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_emNet_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_emPack_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_emSSH_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_emSSL_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_emSecure_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_emUSBD_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_emUSBH_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_emWeb_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_emWin_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Icon_embOS_64x64.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/SWIPELIST_Demo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Application/Separator_218x21.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Config/GUIConf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Config/LCDConf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Config/SIMConf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GUI/Include/BUTTON.h" />
+		<Unit filename="GUI/Include/CALENDAR.h" />
+		<Unit filename="GUI/Include/CHECKBOX.h" />
+		<Unit filename="GUI/Include/CHOOSECOLOR.h" />
+		<Unit filename="GUI/Include/CHOOSEFILE.h" />
+		<Unit filename="GUI/Include/DIALOG.h" />
+		<Unit filename="GUI/Include/DROPDOWN.h" />
+		<Unit filename="GUI/Include/EDIT.h" />
+		<Unit filename="GUI/Include/FRAMEWIN.h" />
+		<Unit filename="GUI/Include/GAUGE.h" />
+		<Unit filename="GUI/Include/GRAPH.h" />
+		<Unit filename="GUI/Include/GUI.h" />
+		<Unit filename="GUI/Include/HEADER.h" />
+		<Unit filename="GUI/Include/ICONVIEW.h" />
+		<Unit filename="GUI/Include/IMAGE.h" />
+		<Unit filename="GUI/Include/KEYBOARD.h" />
+		<Unit filename="GUI/Include/KNOB.h" />
+		<Unit filename="GUI/Include/LISTBOX.h" />
+		<Unit filename="GUI/Include/LISTVIEW.h" />
+		<Unit filename="GUI/Include/LISTWHEEL.h" />
+		<Unit filename="GUI/Include/MENU.h" />
+		<Unit filename="GUI/Include/MESSAGEBOX.h" />
+		<Unit filename="GUI/Include/MULTIEDIT.h" />
+		<Unit filename="GUI/Include/MULTIPAGE.h" />
+		<Unit filename="GUI/Include/PROGBAR.h" />
+		<Unit filename="GUI/Include/QRCODE.h" />
+		<Unit filename="GUI/Include/RADIO.h" />
+		<Unit filename="GUI/Include/ROTARY.h" />
+		<Unit filename="GUI/Include/SCROLLBAR.h" />
+		<Unit filename="GUI/Include/SEGGER.h" />
+		<Unit filename="GUI/Include/SLIDER.h" />
+		<Unit filename="GUI/Include/SPINBOX.h" />
+		<Unit filename="GUI/Include/SWIPELIST.h" />
+		<Unit filename="GUI/Include/SWITCH.h" />
+		<Unit filename="GUI/Include/TEXT.h" />
+		<Unit filename="GUI/Include/TREEVIEW.h" />
+		<Unit filename="GUI/Include/WIDGET.h" />
+		<Unit filename="GUI/Include/WM.h" />
+		<Unit filename="Simulation/WinMain.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+			<envvars />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

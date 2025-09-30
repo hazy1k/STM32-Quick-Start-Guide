@@ -1,0 +1,1013 @@
+<html>
+<head>
+<title>emWin - Trial version</title>
+</head>
+
+<style>
+ H1, H2, H3 { color: blue }
+ H1, H2, H3 { font-family: Helvetica;}
+ PRE {  color: black;  margin-left: 2%; }
+ BODY { color: black;  margin-left: 2%; font-family: Verdana; font-size=75%}
+ TABLE{ color: black;  font-family: Verdana; font-size=100%}
+</style>
+<body bgcolor="#FFFFFF">
+
+<!-------------------------------------------------------------------------->
+<!-- Contents                                                             -->
+<!-------------------------------------------------------------------------->
+<h1><font size=+3><b><i>emWin</i></b></font> - Trial version</h1>
+<OL>
+  <LI><A HREF="#1">Introduction</A> </LI>
+  <LI><A HREF="#2">Requirements</A> </LI>
+  <LI><A HREF="#3">List of files</A> </LI>
+  <LI><A HREF="#4">Rebuilding the project</A> </LI>
+  <LI><A HREF="#5">Debugging the application</A> </LI>
+  <LI><A HREF="#6">Modifying the application</A> </LI>
+  <LI><A HREF="#7">Samples</A> </LI>
+  <LI><A HREF="#8">Tutorials</A> </LI>
+</OL>
+<hr>
+
+<!-------------------------------------------------------------------------->
+<!-- Introduction                                                         -->
+<!-------------------------------------------------------------------------->
+<h2><a name="1">Introduction</a></h2>
+This trial version allows you to evaluate all functions of <font size=+1><b><i>emWin</i></b></font>. It contains a fully-featured library including the following:<br>
+<OL>
+  <LI>Window manager</LI>
+  <LI>Memory devices</LI>
+  <LI>Antialiasing</LI>
+  <LI>Widget library</LI>
+  <LI>Touch panel support</LI>
+</OL>
+It also contains the following tools:<br>
+<OL>
+  <LI>The <font size=+1><b><i>emWin</i></b></font> - viewer: A useful tool to step through the simulation.</LI>
+  <LI>A demo version of the font converter.</LI>
+  <LI>A demo version of the bitmap converter.</LI>
+</OL>
+You need CodeBlocks IDE V10.05 (or later) for Windows and MinGW-compiler or Microsoft Visual Studio (V 2010 or later) to be able to rebuild the project.<br><br>
+Please note that this trial version contains a precompiled emWin library. This implicates that preprocessor dependend configuration options can not be changed.
+With other words changes in the files LCDConf.h or GUIConf.h take no effect on the library. They should not be changed.<br><br>
+<hr>
+
+<!-------------------------------------------------------------------------->
+<!-- Requirements                                                         -->
+<!-------------------------------------------------------------------------->
+<h2><a name="2">Requirements</a></h2>
+<OL>
+  <LI>Windows 2000 or later</LI>
+  <LI>CodeBlocks IDE V10.05 (or later) for Windows and MinGW-compiler or</LI>
+  <LI>Microsoft Visual Studio 2010 or later</LI>
+</OL>
+<hr>
+
+<!-------------------------------------------------------------------------->
+<!-- List of files                                                        -->
+<!-------------------------------------------------------------------------->
+<h2><a name="3">List of files</a></h2>
+The trial version contains the following files:<br>
+  <table>
+    <tr>
+      <td width=50% HEIGHT="30"><B>Folder\File(s)</td>
+      <td width=50%><B>Explanation</td>
+    </tr>
+    <tr>
+      <td>Application\*.h, *.c</td>
+      <td>Source of the demo program</td>
+    </tr>
+    <tr>
+      <td>Config\*.h, *.c</td>
+      <td>Configuration files used to build the trial library.</td>
+    </tr>
+    <tr>
+      <td>Exe\GUISimulation.exe</td>
+      <td>Ready to use demo program</td>
+    </tr>
+    <tr>
+      <td>GUI\Include\*.h</td>
+      <td>Include files needed to use the library</td>
+    </tr>
+    <tr>
+      <td>GUI\Library\GUI.lib</td>
+      <td>GUI-library for Visual C++ V6.0 or later</td>
+    </tr>
+    <tr>
+      <td>Sample\*.c</td>
+      <td>Source code of the samples</td>
+    </tr>
+    <tr>
+      <td>Simulation\*.*</td>
+      <td>Simulation library, ressources and SIM_X.c</td>
+    </tr>
+    <tr>
+      <td>Tool\BmpCvtDemo_VXXX_Install.exe</td>
+      <td>Demo version of the emWin Bitmap converter</td>
+    </tr>
+    <tr>
+      <td>Tool\emWinView.exe</td>
+      <td>emWin Viewer, used for debugging the application</td>
+    </tr>
+    <tr>
+      <td>Tool\FontCvtDemo.exe</td>
+      <td>Demo version of the font converter</td>
+    </tr>
+    <tr>
+      <td>Tool\emVNC.exe</td>
+      <td>Segger VNC client to be used to view and to control the application from a different system</td>
+    </tr>
+    <tr>
+      <td>Tool\emWinPlayer.exe</td>
+      <td>Player for emWin Movie Files (*.emf).</td>
+    </tr>
+    <tr>
+      <td>Tool\emWinSPY.exe</td>
+      <td>Tool to be used to show runtime information of the embedded target on a PC</td>
+    </tr>
+    <tr>
+      <td>CleanUp.bat</td>
+      <td>Removes the compiler output</td>
+    </tr>
+    <tr>
+      <td>ReadMe.html</td>
+      <td>This file</td>
+    </tr>
+    <tr>
+      <td>SimulationTrial.cbp</td>
+      <td>Project file for CodeBlocks IDE V10.05 and MinGW-compiler</td>
+    </tr>
+    <tr>
+      <td>SimulationTrial.sln</td>
+      <td>Workspace file for Visual Studio 2010 or later</td>
+    </tr>
+    <tr>
+      <td>SimulationTrial.vcxproj</td>
+      <td>Project file for Visual Studio 2010 or later</td>
+    </tr>
+    <tr>
+      <td>SimulationTrial.vcxproj.filters</td>
+      <td>Project filters file for Visual Studio 2010 or later</td>
+    </tr>
+  </table>
+<br>
+<hr>
+
+<!-------------------------------------------------------------------------->
+<!-- Rebuilding the project                                               -->
+<!-------------------------------------------------------------------------->
+<h2><a name="4">Rebuilding the project</a></h2>
+Please note that the configuration can be changed in the files LCDConf.c, GUIConf.h and SIMConf.c. Please do not change the files LCDConf.h and GUIConf.h. It takes no effect on the precompiled library.
+Changes in the configuration files take only effect if rebuilding the library.<br><br>
+<tr>
+  <td HEIGHT="60"><font size=+1><B><li>Using CodeBlocks IDE with MinGW</li></B></font>
+  <td></td>
+</tr>
+<ol>
+  <li>Copy all files to your hard drive.</li>
+  <li>Make sure CodeBlocks V10.05 or later is installed.</li>
+  <li>Make sure MinGW is installed.</li>
+  <li>Open the project by double-clicking the project file.</li>
+  <li>Press <FONT FACE="Courier New"><B>STRG+F9</B></FONT> to rebuild the project.</li>
+  <li>Press <FONT FACE="Courier New"><B>STRG+F10</B></FONT> to start the simulation.</li>
+</ol>
+<tr>
+  <td HEIGHT="60"><font size=+1><B><li>Using Microsoft Visual Studio</li></B></font>
+  <td></td>
+</tr>
+<ol>
+  <li>Copy all files to your hard drive.</li>
+  <li>Make sure Visual C++ V6.0 or later is installed.</li>
+  <li>Open the project by double-clicking the workspace.</li>
+  <li>Press <FONT FACE="Courier New"><B>F7</B></FONT> to rebuild the project.</li>
+  <li>Press <FONT FACE="Courier New"><B>F5</B></FONT> to start the simulation.</li>
+</ol>
+<hr>
+
+<!-------------------------------------------------------------------------->
+<!-- Debugging the application                                            -->
+<!-------------------------------------------------------------------------->
+<h2><a name="5">Debugging the application</a></h2>
+<ol>
+  <li>Start the viewer by double-clicking emWinView.exe.</li>
+  <li>Step through the application. The viewer shows the contents of the LCD-display.</li>
+</ol>
+<hr>
+
+<!-------------------------------------------------------------------------->
+<!-- Modifying the application                                            -->
+<!-------------------------------------------------------------------------->
+<h2><a name="6">Modifying the application</a></h2>
+Feel free to change the demo program. You can modify the source files of the demo program and add or delete files to/from the project.<br><br>
+<tr>
+  <td HEIGHT="60"><font size=+1><B><li>Using CodeBlocks IDE with MinGW</li></B></font>
+  <td></td>
+</tr>
+<ol>
+  <li>Edit the source code or modify the project by adding or deleting files.</li>
+  <li>Press <FONT FACE="Courier New"><B>STRG+F9</B></FONT> to rebuild the project.</li>
+  <li>Press <FONT FACE="Courier New"><B>STRG+F10</B></FONT> to start the simulation.</li>
+</ol>
+<tr>
+  <td HEIGHT="60"><font size=+1><B><li>Using Microsoft Visual Studio</li></B></font>
+  <td></td>
+</tr>
+<ol>
+  <li>Edit the source code or modify the project by adding or deleting files.</li>
+  <li>Press <FONT FACE="Courier New"><B>F7</B></FONT> to rebuild the project.</li>
+  <li>Press <FONT FACE="Courier New"><B>F5</B></FONT> to start the simulation.</li>
+</ol>
+<hr>
+
+<!-------------------------------------------------------------------------->
+<!-- Samples                                                              -->
+<!-------------------------------------------------------------------------->
+
+<!-- Applicaton samples -->
+
+<h2><a name="7">Samples</a></h2>
+  <table>
+    <tr>
+      <td><BR><B>Analog Clock</B>
+      <BR>Shows a clock with retro look using animations to animate the hands.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\AnalogClock_390x390>Sample\Application\AnalogClock_390x390\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Bouncing balls</B>
+      <BR>Bouncing ball demo playing with elastic impact and gravity.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\Bounce.c>Sample\Application\Bounce.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Game Of Life</B>
+      <BR>Game of Life, a cellular automaton devised by the British mathematician John Horton Conway.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\GUI_Life.c>Sample\Application\GUI_Life.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Normal Mapping</B>
+      <BR>Normal mapping sample showing a light beam which can be moved by the touch screen.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\GUI_NormalMapping_480x272>Sample\Application\GUI_NormalMapping_480x272\*.*</a></font></td>
+    </tr>
+    <tr><td></td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\GUI_NormalMapping_800x480>Sample\Application\GUI_NormalMapping_800x480\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Mandelbrot Demo</B>
+      <BR>Fractal demo based on the Mandelbrot algorithm which allows deep zooming operations.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\MandelbrotDemo>Sample\Application\MandelbrotDemo\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Movie Player</B>
+      <BR>Ready to use player for emWin Movie Files containing a small explorer which can be used either on the PC or directly on the target hardware if emWin is available.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\MoviePlayer>Sample\Application\MoviePlayer\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Product Show</B>
+      <BR>Shows the process of brewing by an animated scheme.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\ProductShow_800x480>Sample\Application\ProductShow_800x480\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Space Evader</B>
+      <BR>Small retro game which controls a spaceship through a field of asteroids.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\SpaceEvader_128x128>Sample\Application\SpaceEvader_128x128\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Swipelist product show</B>
+      <BR>Shows a list of products using the SWIPELIST widget and the animation object.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\SwipelistDemo_480x272>Sample\Application\SwipelistDemo_480x272\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Temperature Control</B>
+      <BR>Shows a temperature control GUI with a rotatable device for setting temperatures for different rooms.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\TemperatureControl_480x272>Sample\Application\TemperatureControl_480x272\*.*</a></font></td>
+    </tr>
+    <tr><td></td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\TemperatureControl_800x480>Sample\Application\TemperatureControl_800x480\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Washing Machine</B>
+      <BR>Shows a washing machine interface demo with.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\WashingMachine_480x272>Sample\Application\WashingMachine_480x272\*.*</a></font></td>
+    </tr>
+    <tr><td></td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\WashingMachine_800x480>Sample\Application\WashingMachine_800x480\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Weather Forecast</B>
+      <BR>MultiLayer application shows how sliding of pictures and animated objects could be achieved.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\WeatherForecast_480x272>Sample\Application\WeatherForecast_480x272\*.*</a></font></td>
+    </tr>
+    <tr><td></td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\WeatherForecast_480x272_SingleLayer>Sample\Application\WeatherForecast_480x272_SingleLayer\*.*</a></font></td>
+    </tr>
+    <tr><td></td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\WeatherForecast_640x480>Sample\Application\WeatherForecast_640x480\*.*</a></font></td>
+    </tr>
+    <tr><td></td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\WeatherForecast_800x480>Sample\Application\WeatherForecast_800x480\*.*</a></font></td>
+    </tr>
+    <tr><td></td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Application\WeatherForecast_800x480_SingleLayer>Sample\Application\WeatherForecast_800x480_SingleLayer\*.*</a></font></td>
+    </tr>
+  </table>
+
+<!-- Applicaton tutorials -->
+
+<h2><a name="8">Tutorials</a></h2>
+  The following examples are available as source code in this trial version:<br>
+  <br>
+  <table>
+    <tr>
+      <td><BR><B>Movie introduction</B>
+      <BR>Shows how to use the movie support functions for showing movies.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MOVIE_ShowFeatures.c>Sample\Tutorial\MOVIE_ShowFeatures.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>File system movies</B>
+      <BR>Explains how to show a movie directly from a file system without having the whole file within the addressable memory area of the CPU. Prepared to be used with emFile or WIN32.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MOVIE_ShowFromFS.c>Sample\Tutorial\MOVIE_ShowFromFS.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Animation object demo</B>
+      <BR>Shows the basic use of the animation object.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\ANIMATION_Basics>Sample\Tutorial\ANIMATION_Basics\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Skinning demo</B>
+      <BR>Shows how to use the skinning functions for activating the new default skin with the most common widgets.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\SKINNING_NestedModal>Sample\Tutorial\SKINNING_NestedModal\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Animated notepad with skinning</B>
+      <BR>Shows a small editor moved in and out with the animation functions. The editor uses the default skin and a custom skin for its keyboard buttons.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\SKINNING_Notepad>Sample\Tutorial\SKINNING_Notepad\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Animated sprites</B>
+      <BR>Animated sprites move over the desktop window.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\SPRITE_SimpleDolphins.c>Sample\Tutorial\SPRITE_SimpleDolphins.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Create animated sprite using a GIF</B>
+      <BR>Shows how to create an animated sprite using a GIF at runtime.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\SPRITE_CreateAnimSpriteByGIF.c>Sample\Tutorial\SPRITE_CreateAnimSpriteByGIF.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Animated sprites and multi tasking</B>
+      <BR>One task shows an animated dialog. A second task moves animated sprites over this dialog.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\SPRITE_MultiTaskingDolphins.c>Sample\Tutorial\SPRITE_MultiTaskingDolphins.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Moving layers</B>
+      <BR>Shows how to use moving layers, alpha blending and chroma blending with multiple layers.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MULTILAYER_AlphaChromaMove>Sample\Tutorial\MULTILAYER_AlphaChromaMove\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Iconslide</B>
+      <BR>Shows an IconSlide-demo within a moving layer.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MULTILAYER_IconSlide>Sample\Tutorial\MULTILAYER_IconSlide\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Picture viewer</B>
+      <BR>Shows how to use blending effects with multiple layers.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MULTILAYER_PictureViewer>Sample\Tutorial\MULTILAYER_PictureViewer\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Softlayer Handwriting</B>
+      <BR>Demonstrates use of soft layers by moving a writing hand and a sponge over a blackboard.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\SOFTLAYER_HandWriting>Sample\Tutorial\SOFTLAYER_HandWriting\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Winter animation</B>
+      <BR>Shows a running deer on several background layers moving with different speeds.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MULTILAYER_WinterAnimation>Sample\Tutorial\MULTILAYER_WinterAnimation\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Real time graph</B>
+      <BR>Shows a real time graph on the first page and uses a second page for the color setup.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\VSCREEN_RealTime>Sample\Tutorial\VSCREEN_RealTime\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Dialog sample</B>
+      <BR>Shows how to use the virtual screen support in a dialog based application.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\VSCREEN_MultiPage>Sample\Tutorial\VSCREEN_MultiPage\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Export simulation output to BMP-file</B>
+      <BR>Shows how to create a BMP-file with the contents of the simulation window.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\2DGL_BMPExport.c>Sample\Tutorial\2DGL_BMPExport.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Drawing bitmap files</B>
+      <BR>Shows how to draw *.BMP files by displaying all bitmaps of the windows directory.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\2DGL_DrawBMP.c>Sample\Tutorial\2DGL_DrawBMP.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Drawing GIF files</B>
+      <BR>Shows how to draw *.GIF files by displaying a GIF movie.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\2DGL_DrawGIF.c>Sample\Tutorial\2DGL_DrawGIF.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Drawing JPEG files</B>
+      <BR>Shows how to draw *.JPEG files by displaying all JPEG's of the windows subdirectory web\wallpaper.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\2DGL_DrawJPEG.c>Sample\Tutorial\2DGL_DrawJPEG.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Drawing scaled JPEG files</B>
+      <BR>Shows how to draw scaled *.JPEG files by displaying all JPEG's from a user definable directory without loading them completely into memory.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\2DGL_DrawJPEGScaled.c>Sample\Tutorial\2DGL_DrawJPEGScaled.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Drawing PNG files</B>
+      <BR>Shows how to draw a *.PNG file.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\2DGL_DrawPNG.c>Sample\Tutorial\2DGL_DrawPNG.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Polygon demo</B>
+      <BR>Shows how to draw a polygon.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\2DGL_DrawPolygon.c>Sample\Tutorial\2DGL_DrawPolygon.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Draw scale using GUI-functions</B>
+      <BR>Shows how to draw a scale using GUI-functions.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\2DGL_DrawScale.c>Sample\Tutorial\2DGL_DrawScale.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>High resolution antialiasing</B>
+      <BR>Shows the difference between normal and high resolution antialiasing by a moving needle.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\AA_HiResAntialiasing.c>Sample\Tutorial\AA_HiResAntialiasing.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>High resolution pixel</B>
+      <BR>Shows how to draw lines using high resolution antialiasing.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\AA_HiResPixels.c>Sample\Tutorial\AA_HiResPixels.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Antialiased lines</B>
+      <BR>Shows how to use antialiasing with different quality factors.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\AA_Lines.c>Sample\Tutorial\AA_Lines.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Antialiased text</B>
+      <BR>Shows how to draw antialiased text with different antialiasing qualities.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\AA_Text.c>Sample\Tutorial\AA_Text.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Bargraph with alpha effect</B>
+      <BR>Shows a bargraph using alpha blending.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\ALPHA_Bargraph.c>Sample\Tutorial\ALPHA_Bargraph.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Bitmap drawing on hardware with alpha blending support</B>
+      <BR>Draws a bitmap with alpha blending information on a system with multiple layers and support for alpha blending.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\ALPHA_DrawBitmapHWAlpha>Sample\Tutorial\ALPHA_DrawBitmapHWAlpha\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Semi transparent dialog</B>
+      <BR>Shows a semi transparent dialog with sliders to adjust the transparency.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\ALPHA_TransparentDialog>Sample\Tutorial\ALPHA_TransparentDialog\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Automatic alpha blending</B>
+      <BR>Animation with several widgets changing their transparency.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\ALPHA_TransWidgets.c>Sample\Tutorial\ALPHA_TransWidgets.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>House control</B>
+      <BR>Simulates a house with elevator and a rotating sign on the roof.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\APP_HouseControl.c>Sample\Tutorial\APP_HouseControl.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>OpenStreetMaps</B>
+      <BR>Simple demo how to achieve a navigation app in combination with an IP stack by loading tiles from openstreetmap.org.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\APP_OpenStreetMap.c>Sample\Tutorial\APP_OpenStreetMap.c</a></font></td>
+    </tr>
+      <td><BR><B>Reversi</B>
+      <BR>A simple board game.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\APP_Reversi.c>Sample\Tutorial\APP_Reversi.c</a></font></td>
+    </tr>
+      <td><BR><B>iType demo</B>
+      <BR>Shows the basics on how to use iType.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\APP_iTypeBasics.c>Sample\Tutorial\APP_iTypeBasics.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Drawing rectangles</B>
+      <BR>Simple demo which fills the screen with random rectangles.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\BASIC_DrawingRects.c>Sample\Tutorial\BASIC_DrawingRects.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Drawing splines</B>
+      <BR>Explains how to draw splines.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\BASIC_DrawSpline.c>Sample\Tutorial\BASIC_DrawSpline.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Driver performance</B>
+      <BR>This sample can be used for measuring the dispaly driver performance.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\BASIC_DriverPerformance.c>Sample\Tutorial\BASIC_DriverPerformance.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>HelloWorld</B>
+      <BR>The typical "Hello world" program.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\BASIC_HelloWorld.c>Sample\Tutorial\BASIC_HelloWorld.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Hello1</B>
+      <BR>The typical "Hello world" program with a counting value.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\BASIC_Hello1.c>Sample\Tutorial\BASIC_Hello1.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>System performance</B>
+      <BR>This sample calculates prime values within a specified period and shows the result.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\BASIC_Performance.c>Sample\Tutorial\BASIC_Performance.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Calendar</B>
+      <BR>Shows how to use the CALENDAR dialog/widget.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\CALENDAR_Basics.c>Sample\Tutorial\CALENDAR_Basics.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Demo lookup table</B>
+      <BR>Shows how to change colors by modifying the lookup table (LUT).</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\COLOR_DemoLUT>Sample\COLOR_DemoLUT\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Color bar demo</B>
+      <BR>Shows how to draw a color bar with gradient bars (Black -> Color, White -> Color).</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\COLOR_ShowColorBar.c>Sample\Tutorial\COLOR_ShowColorBar.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Cursor demo</B>
+      <BR>Shows how to use different cursors.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\CURSOR_Sample.c>Sample\Tutorial\CURSOR_Sample.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Creating a dialog with several kinds of controlls</B>
+      <BR>Shows how to create a dialog using GUI_ExecDialogBox.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\DIALOG_All.c>Sample\Tutorial\DIALOG_All.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Counting dialog</B>
+      <BR>Creates a dialog with a text widget using the big digit fonts for counting.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\DIALOG_Count.c>Sample\Tutorial\DIALOG_Count.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>File dialog box</B>
+      <BR>Shows how to use the CHOOSEFILE dialog box of emWin. This sample also works without changes with emFile.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\DIALOG_FS_ChooseFile.c>Sample\Tutorial\DIALOG_FS_ChooseFile.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Menu structure</B>
+      <BR>Shows how a menu structure could be achieved between different dialogs.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\DIALOG_MenuStructure.c>Sample\Tutorial\DIALOG_MenuStructure.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Using message boxes</B>
+      <BR>Shows how to create a message box.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\DIALOG_MessageBox.c>Sample\Tutorial\DIALOG_MessageBox.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Customized message box</B>
+      <BR>Shows how to create a customized message box.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\DIALOG_MessageBoxUser.c>Sample\Tutorial\DIALOG_MessageBoxUser.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Modal dialog</B>
+      <BR>Creates a nested modal dialog after pressing a button.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\DIALOG_NestedModal.c>Sample\Tutorial\DIALOG_NestedModal.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Creating a dialog with RADIO widgets</B>
+      <BR>Shows how to create a dialog with a group of radio buttons.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\DIALOG_Radio.c>Sample\Tutorial\DIALOG_Radio.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Using SLIDER widgets</B>
+      <BR>Shows how to use SLIDER widgets to modify RGB-Colors.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\DIALOG_SliderColor.c>Sample\Tutorial\DIALOG_SliderColor.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Language resource file demo</B>
+      <BR>Under WIN32 the demo creates sample resource files in the EXE folder and uses them as language resource files in the demo.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\LANG_UTF8_CSV_TXT.c>Sample\LANG_UTF8_CSV_TXT.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Simple language resource file demo</B>
+      <BR>Less complex and more simple demo which shows how language resource files can be used.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\LANG_UTF8_Text.c>Sample\LANG_UTF8_Text.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Arabic language demo</B>
+      <BR>Shows how to use emWin to draw Arabic text with bidirectional text support.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\FONT_Arabic.c>Sample\FONT_Arabic.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Chinese language demo</B>
+      <BR>Shows how to achieve drawing of Chinese with emWin.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\FONT_Chinese.c>Sample\FONT_Chinese.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>External binary font demo</B>
+      <BR>Shows how to use external binary fonts (XBF) in emWin.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\FONT_ShowXBF>Sample\FONT_ShowXBF\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Shift-JIS demo</B>
+      <BR>Shows how to create and use Shift-JIS (Japanese industrie standard) fonts with double byte characters.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\FONT_ShiftJIS.c>Sample\Tutorial\FONT_ShiftJIS.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>True type fonts</B>
+      <BR>Shows a preview of all installed true type fonts.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\FONT_ShowAllTTFs.c>Sample\Tutorial\FONT_ShowAllTTFs.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Thai language demo</B>
+      <BR>Shows how to use emWin to draw Thai text with compound characters.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\FONT_ThaiText.c>Sample\Tutorial\FONT_ThaiText.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>iType basics</B>
+      <BR>Shows how to use the iType font engine. Can only be used together with iType engine.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\FONT_ThaiText.c>Sample\Tutorial\FONT_ThaiText.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Attitude indicator</B>
+      <BR>Shows how to use the function GUI_MEMDEV_RotateHQHR() for rotating and scaling a memory device and for placing the result within a range of subpixels.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MEMDEV_AttitudeIndicator.c>Sample\Tutorial\MEMDEV_AttitudeIndicator.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Automatic banding memory device</B>
+      <BR>Shows how to use an GUI_AUTODEV-object to draw overlapping items without flickering.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MEMDEV_AutoDev.c>Sample\Tutorial\MEMDEV_AutoDev.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Banding memory device</B>
+      <BR>Shows how to use banding memory devices to draw overlapping items without flickering.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MEMDEV_Banding.c>Sample\Tutorial\MEMDEV_Banding.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Speedometer demo based on bitmaps</B>
+      <BR>Shows how to create an animated speedometer based on bitmaps for needle and scale.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MEMDEV_BitmapSpeedometer.c>Sample\Tutorial\MEMDEV_BitmapSpeedometer.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Blurring & Blending</B>
+      <BR>Shows how to use the window effect functions for blurring and blending the window background.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MEMDEV_BlurAndBlend.c>Sample\Tutorial\MEMDEV_BlurAndBlend.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Fade in demo</B>
+      <BR>Shows how to use memory devices for a fade in/fade out effect.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MEMDEV_FadeIn.c>Sample\Tutorial\MEMDEV_FadeIn.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Measuring fading performance</B>
+      <BR>The sample calculates the fading performance by fading between two screens.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MEMDEV_FadingPerformance.c>Sample\Tutorial\MEMDEV_FadingPerformance.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Image flow demo</B>
+      <BR>The demo uses memory devices for drawing perspectively distorted images.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MEMDEV_ImageFlow>Sample\Tutorial\MEMDEV_ImageFlow\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Fading and moving windows #1</B>
+      <BR>Shows how to use the window effect functions for fading and moving several windows of the LISTWHEEL widget sample.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MEMDEV_ListWheelEffects>Sample\Tutorial\MEMDEV_ListWheelEffects\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Fading and moving windows #2</B>
+      <BR>Shows how to use the window effect functions for fading and moving several windows.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MEMDEV_WindowEffects>Sample\Tutorial\MEMDEV_WindowEffects\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Basic memory device demo</B>
+      <BR>Shows how to use memory devices for drawing operations.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MEMDEV_MemDev.c>Sample\Tutorial\MEMDEV_MemDev.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Printing demo</B>
+      <BR>Shows how to use a memory device to print something on a printer device.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MEMDEV_Printing.c>Sample\Tutorial\MEMDEV_Printing.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Speedometer demo</B>
+      <BR>Shows how to use memory devices and 'Hires Antialiasing' for the needle of a speedometer and shows how to rotate images using memory devices.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MEMDEV_Speedometer.c>Sample\Tutorial\MEMDEV_Speedometer.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Using data pointers</B>
+      <BR>Shows how to use the function GUI_MEMDEV_GetDataPtr() to get access to the memory device data.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MEMDEV_UseDataPointer.c>Sample\Tutorial\MEMDEV_UseDataPointer.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Ticker text sample</B>
+      <BR>Shows how to achieve a ticker. It creates a high resolution ticker based on memory devices and a more simple one based on the window manager.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MEMDEV_WM_Ticker.c>Sample\Tutorial\MEMDEV_WM_Ticker.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Zoom and rotate images</B>
+      <BR>This demo shows how to use the functions GUI_MEMDEV_Rotate() and GUI_MEMDEV_RotateHQ() for rotating and zooming images.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MEMDEV_ZoomAndRotate.c>Sample\Tutorial\MEMDEV_ZoomAndRotate.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Icon slide demo</B>
+      <BR>Advanced use of motion support and GUI_MEMDEV_Rotate() / GUI_MEMDEV_RotateHQ() for sliding pages of icons using different effects.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MOTION_IconSlide>Sample\Tutorial\MOTION_IconSlide\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Overlapping effect</B>
+      <BR>Shows how to use overlapping.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MOTION_OverlapByWindow.c>Sample\Tutorial\MOTION_OverlapByWindow.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Radial menu demo</B>
+      <BR>Shows how advanced motion support can be used to achieve a radial menu.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MOTION_RadialMenu.c>Sample\Tutorial\MOTION_RadialMenu.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Smartphone menu</B>
+      <BR>Shows a vertical menu which can be slided by using motion support.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MOTION_SmartPhoneMenu>Sample\Tutorial\MOTION_SmartPhoneMenu\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Simple motion support demo</B>
+      <BR>Shows how motion support can be used to move windows.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MOTION_MovingWindow.c>Sample\Tutorial\MOTION_MovingWindow.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Custom bitmap view</B>
+      <BR>Shows how to use custom defined bitmaps for the simulation view.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\SIM_CustomBitmapView>Sample\Tutorial\SIM_CustomBitmapView\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Hardkey sample</B>
+      <BR>Shows how to use simulation hardkeys.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\SIM_Hardkey>Sample\Tutorial\SIM_Hardkey\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Picture viewer</B>
+      <BR>Uses multiple touchpoints for zooming into the pictures.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MTOUCH_PictureViewer>Sample\Tutorial\MTOUCH_PictureViewer\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Gestures and Scratchpad</B>
+      <BR>Shows hot to use WM_GESTURE messages within a window and how to achieve a scratchpad supporting multiple touchpoints simultaneously.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\MTOUCH_ScratchAndGestures>Sample\Tutorial\MTOUCH_ScratchAndGestures\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Runtime calibration</B>
+      <BR>Shows how a touch screen can be calibrated at runtime.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\TOUCH_Calibrate.c>Sample\Tutorial\TOUCH_Calibrate.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Touch panel demo</B>
+      <BR>Shows how to access a touch panel without using buttons.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\TOUCH_Sample.c>Sample\Tutorial\TOUCH_Sample.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>VNC demo</B>
+      <BR>Shows how to use the VNC support (creates a VNC server and waits for a connection).</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\VNC.c>Sample\Tutorial\VNC.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Round button</B>
+      <BR>Shows how to create a customized button with a round outline.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_ButtonRound.c>Sample\Tutorial\WIDGET_ButtonRound.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Custom effect frame</B>
+      <BR>Shows how to use widgets with customized effect frames.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_CustomEffect.c>Sample\Tutorial\WIDGET_CustomEffect.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Custom widget</B>
+      <BR>Shows how to create a custom widget.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_CustomWidgetType.c>Sample\Tutorial\WIDGET_CustomWidgetType.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Checkbox sample</B>
+      <BR>Shows how to use check boxes with user defined images and in different sizes.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_Checkbox>Sample\Tutorial\WIDGET_Checkbox\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Dropdown widget demo</B>
+      <BR>Shows how to create and use a DROPDOWN widget.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_Dropdown.c>Sample\Tutorial\WIDGET_Dropdown.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Edit text demo</B>
+      <BR>Shows how to use an EDIT widget to edit text.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_Edit.c>Sample\Tutorial\WIDGET_Edit.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>User defined edit mode demo</B>
+      <BR>Shows how to use a user defined edit mode with an EDIT widget.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_EditWinmode.c>Sample\Tutorial\WIDGET_EditWinmode.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Widget effect demo</B>
+      <BR>Shows how to use different effects (3D, simple, none) with widgets.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_Effect.c>Sample\Tutorial\WIDGET_Effect.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Frame window demo</B>
+      <BR>Shows how to use FRAMEWIN widgets to give your windows a PC-windows like appearance.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_FrameWin.c>Sample\Tutorial\WIDGET_FrameWin.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Graph widget demo (XY)</B>
+      <BR>Shows how to use the GRAPH widget to visualize a function graph.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_GraphXY.c>Sample\Tutorial\WIDGET_GraphXY.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Graph widget demo (YT)</B>
+      <BR>Shows how to use the GRAPH widget to visualize measurement values.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_GraphYT.c>Sample\Tutorial\WIDGET_GraphYT.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Header widget demo</B>
+      <BR>Shows how to use a HEADER widget for your own needs.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_Header.c>Sample\Tutorial\WIDGET_Header.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Icon view demo</B>
+      <BR>The demo uses the ICONVIEW widget for showing an icon based menu like often required in hand held devices.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_ICONVIEW>Sample\Tutorial\WIDGET_ICONVIEW\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Amplifier</B>
+      <BR>Uses the KNOW widged for realizing an amplifier.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_Knob>Sample\Tutorial\WIDGET_Knob\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Listbox demo</B>
+      <BR>Shows how to use LISTBOX widgets.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_ListBox.c>Sample\Tutorial\WIDGET_ListBox.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Owner drawn list box</B>
+      <BR>Shows how to create an owner drawn list box.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_ListBoxOwnerDraw.c>Sample\Tutorial\WIDGET_ListBoxOwnerDraw.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Listview widget demo</B>
+      <BR>Shows how to use a LISTVIEW widget.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_ListView.c>Sample\Tutorial\WIDGET_ListView.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Listwheel widget demo</B>
+      <BR>The demo shows how the LISTWHEEL widget can be used.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_ListWheel>Sample\Tutorial\WIDGET_ListWheel\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Menu widget demo</B>
+      <BR>Shows a typicall application window with a menu.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_Menu.c>Sample\Tutorial\WIDGET_Menu.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Text editor</B>
+      <BR>Shows how to use a MULTIEDIT widget to create a small text editor.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_Multiedit.c>Sample\Tutorial\WIDGET_Multiedit.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Try out text editor</B>
+      <BR>Shows a dialog for trying out many of the available options of the MULTIEDIT widget.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_MultieditTryIt.c>Sample\Tutorial\WIDGET_MultieditTryIt.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Switching between languages</B>
+      <BR>Shows how to change the used language within the widgets of existing dialogs.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_MultiLanguageCSV.c>Sample\Tutorial\WIDGET_MultiLanguageCSV.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Multipage widget</B>
+      <BR>Shows how to use a MULTIPAGE widget.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_Multipage.c>Sample\Tutorial\WIDGET_Multipage.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Num pad demo</B>
+      <BR>The sample shows how to create a num pad which sends the pressed key to the window with the input focus.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_NumPad.c>Sample\Tutorial\WIDGET_NumPad.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Button with user defined bitmap</B>
+      <BR>Shows how to use a BUTTON widget to create a button with a phone logo.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_ButtonPhone.c>Sample\Tutorial\WIDGET_ButtonPhone.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Popup menu demo</B>
+      <BR>Shows how to use a MENU widget to create a popup menu.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_PopupMenu.c>Sample\Tutorial\WIDGET_PopupMenu.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Progress bar demo</B>
+      <BR>Shows how to use PROGBAR widgets to realize progress bars in your application.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_Progbar.c>Sample\Tutorial\WIDGET_Progbar.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Progress bar custom skin</B>
+      <BR>Shows how to realize a custom skin within a PROGBAR widget in your application.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_ProgbarCustomSkin.c>Sample\Tutorial\WIDGET_ProgbarCustomSkin.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Widget large scheme sample</B>
+      <BR>Shows the appearance of the large widget scheme.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_SchemeLarge>Sample\Tutorial\WIDGET_SchemeLarge\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Widget medium scheme sample</B>
+      <BR>Shows the appearance of the medium widget scheme.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_SchemeMedium>Sample\Tutorial\WIDGET_SchemeMedium\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Widget small scheme sample</B>
+      <BR>Shows the appearance of the small widget scheme.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_SchemeSmall>Sample\Tutorial\WIDGET_SchemeSmall\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Scroll bar demo</B>
+      <BR>Shows how to use SCROLLBAR widgets to realize scrolling in your application.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_ScrollbarMove.c>Sample\Tutorial\WIDGET_ScrollbarMove.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Simple spinbox</B>
+      <BR>Shows how to use SPINBOX widget to spin numerical variables up and down.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_Spinbox.c>Sample\Tutorial\WIDGET_Spinbox.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Simple button</B>
+      <BR>Shows how to use a BUTTON widget.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_ButtonSimple.c>Sample\Tutorial\WIDGET_ButtonSimple.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Simple listbox</B>
+      <BR>Shows how to use a LISTBOX widget.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_SimpleListBox.c>Sample\Tutorial\WIDGET_SimpleListBox.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Simple progress bar</B>
+      <BR>Shows how to create a progress bar.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_SimpleProgbar.c>Sample\Tutorial\WIDGET_SimpleProgbar.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Simple swipe list</B>
+      <BR>Shows how to create a simple swipelist.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_SwipeList.c>Sample\Tutorial\WIDGET_SwipeList.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Sorted listview sample</B>
+      <BR>Shows how to use the sorting functions of the listview widget.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_SortedListview.c>Sample\Tutorial\WIDGET_SortedListview.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Treeview widget</B>
+      <BR>Shows how to fill a treeview widget.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_Treeview>Sample\Tutorial\WIDGET_Treeview\*.*</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Customized treeview widget</B>
+      <BR>Shows a completely customized treeview widget.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_CustomTreeview.c>Sample\Tutorial\WIDGET_CustomTreeview.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Try out treeview widget</B>
+      <BR>Shows how to use the treeview widget.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_TreeviewTryit.c>Sample\Tutorial\WIDGET_TreeviewTryit.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Using the WINDOW widget</B>
+      <BR>Demonstrates the use of a window widget to create a dialog from a resource table.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WIDGET_Window.c>Sample\Tutorial\WIDGET_Window.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Late clipping demo</B>
+      <BR>Explains how to use late clipping.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WM_LateClipping.c>Sample\Tutorial\WM_LateClipping.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Redrawing demo</B>
+      <BR>Explains the redrawing mechanism of emWin by using a new callback routine for the background window.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WM_Redraw.c>Sample\Tutorial\WM_Redraw.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Window manager demo</B>
+      <BR>Explains a couple of the most often needed window manager functions.</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WM_Sample.c>Sample\Tutorial\WM_Sample.c</a></font></td>
+    </tr>
+    <tr>
+      <td><BR><B>Video demo</B>
+      <BR>Explains how to react on WM_NOTIFY_VIS_CHANGED by using the function WM_IsCompletelyVisible().</td>
+      <td><BR><FONT FACE="Courier New"><B><a href=Sample\Tutorial\WM_Video.c>Sample\Tutorial\WM_Video.c</a></font></td>
+    </tr>
+  </table>
+  <br>
+  Feel free to use this sample code in your application.<br>
+  <br>
+<hr>
+
+<br>
+Copyright 2021 SEGGER Microcontroller GmbH. All rights reserved.<br>
+For more information, please visit our website <a href ="http://www.segger.com/">www.segger.com</a> or contact us at <a href ="mailto:info@segger.com">info@segger.com</a><br>
+</font>
+
+</body>
+</html>

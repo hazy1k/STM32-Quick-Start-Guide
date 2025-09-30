@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Application">
+      <UniqueIdentifier>{03ae3b30-f260-4557-b390-afcc0d48f007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{4966d432-4b2b-457a-a42c-59795d88f209}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{195b1715-e110-44d7-b57b-3e5fe8ce524c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Include">
+      <UniqueIdentifier>{03510991-5993-4259-ab22-9a84d93df532}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Library">
+      <UniqueIdentifier>{3c73e187-e233-48f4-be77-d82358a860ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Simulation">
+      <UniqueIdentifier>{bbf090c5-dfd0-41d8-89f2-b58a9ae3ad34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP_Demo">
+      <UniqueIdentifier>{4eabd63d-c7a1-4806-b7bd-6c2736d30fa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP_Image">
+      <UniqueIdentifier>{6a42d2b5-d8a3-4b04-98b0-9d75acc0c623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="APP_test">
+      <UniqueIdentifier>{efe6b96e-f213-4d46-85cc-32e6571df429}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Config\LCDConf.c">
+      <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="Config\SIMConf.c">
+      <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="Simulation\WinMain.c">
+      <Filter>Simulation</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Background_480x272.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\BackgroundWindow_480x272.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_embOS_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_emCompress_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_emCrypt_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_emFile_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_emFTP_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_emLib_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_emLoad_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_emModbus_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_emMQTT_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_emNet_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_emPack_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_emSecure_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_emSSH_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_emSSL_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_emUSBD_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_emUSBH_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_emWeb_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_emWin_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_ES_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_Flasher_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_IoT_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_JLink_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_Ozone_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Icon_SysView_64x64.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\Separator_218x21.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Application\SWIPELIST_Demo.c">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\2DGL_BMPExport.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\2DGL_DrawBMP.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\2DGL_DrawGIF.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\2DGL_DrawJPEG.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\2DGL_DrawJPEGScaled.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\2DGL_DrawPNG.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\2DGL_DrawPolygon.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\2DGL_DrawScale.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\AA_HiResAntialiasing.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\AA_HiResPixels.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\AA_Lines.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\AA_Text.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\ALPHA_Bargraph.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\ALPHA_TransWidgets.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\APP_HouseControl.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\APP_iTypeBasics.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\APP_OpenStreetMap.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\APP_Reversi.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\BASIC_DrawingRects.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\BASIC_DrawSpline.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\BASIC_DriverPerformance.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\BASIC_Hello1.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\BASIC_HelloWorld.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\BASIC_Performance.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\BASIC_TestScreen.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\CALENDAR_Basics.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\COLOR_ShowColorBar.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\CURSOR_Sample.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\DIALOG_All.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\DIALOG_Count.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\DIALOG_FS_ChooseFile.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\DIALOG_MenuStructure.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\DIALOG_MessageBox.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\DIALOG_MessageBoxUser.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\DIALOG_NestedModal.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\DIALOG_Radio.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\DIALOG_SliderColor.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\FONT_Arabic.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\FONT_Chinese.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\FONT_ShiftJIS.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\FONT_ShowAllTTFs.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\FONT_ThaiText.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\LANG_UTF8_CSV_TXT.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\LANG_UTF8_Text.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MEMDEV_AttitudeIndicator.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MEMDEV_AutoDev.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MEMDEV_Banding.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MEMDEV_BitmapSpeedometer.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MEMDEV_BlurAndBlend.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MEMDEV_FadeIn.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MEMDEV_FadingPerformance.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MEMDEV_MemDev.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MEMDEV_Printing.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MEMDEV_Speedometer.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MEMDEV_UseDataPointer.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MEMDEV_WM_Ticker.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MEMDEV_ZoomAndRotate.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MOTION_MovingWindow.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MOTION_OverlapByWindow.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MOTION_RadialMenu.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MOVIE_ShowFeatures.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\MOVIE_ShowFromFS.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\ProblemReport.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\SPRITE_CreateAnimSpriteByGIF.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\SPRITE_MultiTaskingDolphins.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\SPRITE_SimpleDolphins.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\TOUCH_Calibrate.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\TOUCH_Sample.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\VNC.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_ButtonPhone.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_ButtonRound.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_ButtonSimple.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_CustomEffect.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_CustomTreeview.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_CustomWidgetType.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_Dropdown.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_Edit.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_EditWinmode.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_Effect.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_FrameWin.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_GraphXY.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_GraphYT.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_Header.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_ListBox.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_ListBoxOwnerDraw.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_ListView.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_Menu.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_Multiedit.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_MultieditTryIt.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_MultiLanguageCSV.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_Multipage.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_NumPad.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_PopupMenu.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_Progbar.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_ProgbarCustomSkin.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_ScrollbarMove.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_SimpleListBox.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_SimpleProgbar.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_SortedListview.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_Spinbox.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_SwipeList.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_TreeviewTryIt.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_Window.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WM_LateClipping.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WM_Redraw.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WM_Sample.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WM_Video.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+    <ClCompile Include="APP_Image\ALIENTEK.c">
+      <Filter>APP_Image</Filter>
+    </ClCompile>
+    <ClCompile Include="APP_Image\music.c">
+      <Filter>APP_Image</Filter>
+    </ClCompile>
+    <ClCompile Include="Config\GUIConf.c">
+      <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="APP_test\bmButtonRound_80x35.c">
+      <Filter>APP_test</Filter>
+    </ClCompile>
+    <ClCompile Include="APP_test\bmButtonRoundPressed_80x35.c">
+      <Filter>APP_test</Filter>
+    </ClCompile>
+    <ClCompile Include="APP_test\bmKNOB_175x175.c">
+      <Filter>APP_test</Filter>
+    </ClCompile>
+    <ClCompile Include="APP_test\bmSeggerLogo_60x30.c">
+      <Filter>APP_test</Filter>
+    </ClCompile>
+    <ClCompile Include="APP_test\bmTemperatureControlSegger800x480.c">
+      <Filter>APP_test</Filter>
+    </ClCompile>
+    <ClCompile Include="APP_test\Font23S_AA4.c">
+      <Filter>APP_test</Filter>
+    </ClCompile>
+    <ClCompile Include="APP_test\Font23SL_AA4.c">
+      <Filter>APP_test</Filter>
+    </ClCompile>
+    <ClCompile Include="APP_test\Font32S_AA4.c">
+      <Filter>APP_test</Filter>
+    </ClCompile>
+    <ClCompile Include="APP_test\Font32SL_AA4.c">
+      <Filter>APP_test</Filter>
+    </ClCompile>
+    <ClCompile Include="APP_test\MainTask_TemperatureControl_800x480.c">
+      <Filter>APP_test</Filter>
+    </ClCompile>
+    <ClCompile Include="Sample\Tutorial\WIDGET_Knob\WIDGET_Knob.c">
+      <Filter>APP_Demo</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Config\LCDConf.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Program Files\Microsoft Visual Studio\VC98\Include\BASETSD.H">
+      <Filter>Simulation</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\BUTTON.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\CALENDAR.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\CHOOSECOLOR.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\CHOOSEFILE.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\DIALOG.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\DROPDOWN.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\EDIT.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\FRAMEWIN.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\GAUGE.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\GRAPH.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\GUI.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\GUI_Version.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\HEADER.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\ICONVIEW.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\IMAGE.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\KEYBOARD.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\KNOB.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\LISTBOX.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\LISTVIEW.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\LISTWHEEL.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\MENU.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\MESSAGEBOX.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\MULTIEDIT.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\MULTIPAGE.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\PROGBAR.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\QRCODE.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\RADIO.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\ROTARY.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\SCROLLBAR.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\SLIDER.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\SPINBOX.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\SWIPELIST.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\SWITCH.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\TEXT.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\TREEVIEW.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\WIDGET.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GUI\Include\WM.h">
+      <Filter>GUI\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="APP_test\Resource.h">
+      <Filter>APP_test</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="GUI\Library\GUI.lib">
+      <Filter>GUI\Library</Filter>
+    </Library>
+    <Library Include="Simulation\GUISim.lib">
+      <Filter>Simulation</Filter>
+    </Library>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Simulation\Simulation.res">
+      <Filter>Simulation</Filter>
+    </Resource>
+  </ItemGroup>
+</Project>
